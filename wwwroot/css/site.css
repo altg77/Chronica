@@ -1,0 +1,287 @@
+:root {
+  --Cor_Primaria: #ab2b38;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+  text-align: start;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background-color: #ffffff;
+}
+
+main {
+  margin-bottom: 10%;
+  transition: padding-top 0.3s ease;
+}
+
+/*================= HEADER ======================*/
+header {
+    background-color: #000; /* Dark background for the header */
+    color: #fff; /* White text color */
+    padding: 10px 0; /* Add some vertical padding */
+}
+
+.navbar {
+    background-color: #000 !important; /* Ensure navbar background is black */
+    padding: 0; /* Remove default navbar padding */
+}
+
+.navbar-expand-lg .navbar-collapse {
+    justify-content: center; /* Center the navigation links */
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items horizontally */
+    max-width: 1200px; /* Limit max width for better appearance */
+    margin: 0 auto; /* Center the container */
+}
+
+.logo-container {
+    margin-right: 20px; /* Space between logo and menu items */
+}
+
+#logo {
+    height: 40px; /* Adjust logo height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff !important; /* White color for all nav links */
+    font-size: 1.1em; /* Slightly larger font size */
+    padding: 10px 15px; /* Padding for links */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    font-weight: bold; /* Bold for active link */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ccc !important; /* Lighter color on hover */
+}
+
+/* Styling for the profile picture dropdown */
+.navbar-nav .dropdown-toggle img {
+    border-radius: 50%; /* Make the image circular */
+    height: 40px; /* Size of the profile image */
+    width: 40px;
+    object-fit: cover; /* Ensure the image covers the area */
+    border: 2px solid #fff; /* White border around the profile pic */
+}
+
+/* Adjust dropdown menu styling */
+.dropdown-menu {
+    background-color: #1a1a1a; /* Darker background for dropdown */
+    border: 1px solid #333; /* Darker border */
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff; /* White text for dropdown items */
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #fff;
+}
+
+.dropdown-menu .dropdown-divider {
+    border-top: 1px solid #555; /* Lighter divider */
+}
+
+/* Bottom rainbow border */
+.header-bottom-border {
+    height: 5px; /* Height of the border */
+    background: linear-gradient(to right,
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        indigo,
+        violet);
+    width: 100%;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #000; /* Dark background for collapsed menu */
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .navbar-nav {
+        align-items: flex-start; /* Align items to start in collapsed view */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%; /* Full width for items in collapsed view */
+        text-align: center; /* Center text */
+    }
+
+    .navbar-nav .dropdown-menu {
+        text-align: center; /* Center dropdown items */
+    }
+
+    .navbar-toggler {
+        filter: invert(1); /* Make the toggler icon white */
+    }
+}
+
+
+/*================= FOOTER ======================*/
+
+footer {
+  background: #d3d3d3;
+  text-align: center;
+}
+
+.footer-logo {
+  color: #000;
+  padding: 30px 20px;
+  border-bottom: 1px solid var(--Cor_Primaria);
+}
+
+.footer-inferior {
+  color: #000;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footer-logo img {
+  width: 300px;
+}
+
+.footer-info {
+  max-width: 300px;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-links a:hover{
+  color: var(--Cor_Primaria);
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-social .social-icon {
+  font-size: 24px;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.footer-contact h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-contact p {
+  margin: 4px 0;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-directs {
+  padding: 20px 0;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+}
+
+/*================= SEACHT ======================*/
+
+.bussola {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 100px;
+  height: 100px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.bussola:hover {
+  transform: scale(1.1);
+  opacity: 2;
+}
+
+.bussola img {
+  width: 100%;
+  height: auto;
+}

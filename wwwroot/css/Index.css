@@ -1,0 +1,325 @@
+
+.section {
+    margin-top: 50px;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/*================= CARROSSEL ======================*/
+
+.carrossel-container {
+    position: relative;
+    max-width: 9000px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel-slide {
+    display: none;
+    width: 100%;
+    position: relative;
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+.carrossel-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    vertical-align: middle;
+    filter: brightness(0.7);
+}
+
+.conteudo-slide {
+    position: absolute;
+    top: 36%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 30px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(calc(-50% + 20px));
+    transition: opacity 0.5s ease-out 0.3s, transform 0.5s ease-out 0.3s;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carrossel-slide.slide-ativo .conteudo-slide {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.conteudo-slide h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 50px;
+}
+
+.conteudo-slide p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.botao-slide {
+    display: inline-block;
+    background-color: var(--Cor_Primaria);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-slide:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+}
+
+.anterior,
+.proximo {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 18px;
+    margin-top: -25px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.proximo {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.anterior:hover,
+.proximo:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.indicadores {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.indicador {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 4px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease, transform 0.2s ease;
+}
+
+.ativo,
+.indicador:hover {
+    background-color: #ffffff;
+    transform: scale(1.1);
+}
+
+/*================= CARROSSEL PRORP ======================*/
+
+.carousel-container-prop {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item-prop {
+    flex: 0 0 33.3333%;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.carousel-item-prop img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.carousel-item-prop img:hover {
+    outline: 2px solid var(--Cor_Primaria);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/*================= CARDS ======================*/
+
+.manga-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.manga-card {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.manga-card:hover {
+    transform: translateY(-5px);
+}
+
+.manga-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.manga-card h3 {
+    padding: 15px;
+    font-size: 20px;
+    color: #333;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--Cor_Primaria);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.manga-card:hover .card-info {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.manga-card h2 {
+    margin-bottom: 2px;
+}
+
+.manga-card p {
+    margin-bottom: 3px;
+}
+
+.manga-card .Date {
+    color: #00000080;
+}
+
+.flag-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 1.8rem;
+    border-radius: 3px;
+    padding: 2px;
+    z-index: 2;
+}
+
+
+/*================= CONTAINER LATERAL ======================*/
+
+.containerlay {
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.maintenance-box {
+    background: #e7f0fa;
+    border-left: 4px solid var(--Cor_Primaria);
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.arrowdash {
+    color: var(--Cor_Primaria);
+    margin-right: 4px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.updates h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+
+.updates-list {
+    font-size: 14px;
+    line-height: 1.4;
+    max-height: 180px;
+    padding-right: 5px;
+}
+
+.update-item {
+    margin-bottom: 12px;
+}
+
+.date {
+    color: #999;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 2px;
+}
