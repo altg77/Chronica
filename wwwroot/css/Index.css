@@ -30,8 +30,7 @@
 
 .carrossel-slide img {
     width: 100%;
-    height: auto;
-    max-height: 500px;
+    height: 680px;
     object-fit: cover;
     vertical-align: middle;
     filter: brightness(0.7);
