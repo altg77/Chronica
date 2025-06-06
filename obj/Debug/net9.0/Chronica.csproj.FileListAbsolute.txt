@@ -90,6 +90,7 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.pdb
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.genruntimeconfig.cache
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\ref\Chronica.dll
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.sourcelink.json
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\rws77r97e9-qafeph0eyj.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\sl27215m1g-pe3hkrp422.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\n5rlgji4ph-4dw0ihcsae.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\rws77r97e9-fnbv9saxcl.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\ztb7nr82sk-5ipweew5fc.gz
