@@ -1,7 +1,10 @@
-
 .section {
     margin-top: 50px;
+    min-height: 100vh;
+    padding: 10rem 9% 5rem;
 }
+
+
 
 .section h2 {
     font-size: 32px;
@@ -140,186 +143,89 @@
     transform: scale(1.1);
 }
 
-/*================= CARROSSEL PRORP ======================*/
-
-.carousel-container-prop {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item-prop {
-    flex: 0 0 33.3333%;
-    padding: 10px;
-    box-sizing: border-box;
-    cursor: pointer;
-    transition: border 0.3s ease;
-}
-
-.carousel-item-prop img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-.carousel-item-prop img:hover {
-    outline: 2px solid var(--Cor_Primaria);
-}
-
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.arrow.left {
-    left: 10px;
-}
-
-.arrow.right {
-    right: 10px;
-}
-
 /*================= CARDS ======================*/
 
-.manga-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+.Desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 40px;
+    flex-grow: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.manga-card {
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s;
-    cursor: pointer;
+.left-panel {
+    flex: 1;
+    min-width: 800px;
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
-.manga-card:hover {
-    transform: translateY(-5px);
+.left-panel h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #E0E0E0;
 }
 
-.manga-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.left-panel p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #CCCCCC;
 }
 
-.manga-card h3 {
-    padding: 15px;
-    font-size: 20px;
-    color: #333;
+.left-panel p strong {
+    color: #ab2b38;
+    font-weight: 700;
 }
 
-.card-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: var(--Cor_Primaria);
+.create-sheet-btn {
+    background-color: #ab2b38;
     color: #fff;
-    padding: 10px 15px;
-    font-size: 14px;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 2px solid #ab2b38;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.manga-card:hover .card-info {
-    opacity: 1;
-    transform: translateY(0%);
+.create-sheet-btn:hover {
+    background-color: #d13c4b;
+    border-color: #d13c4b;
 }
 
-.manga-card h2 {
-    margin-bottom: 2px;
+.right-panel {
+    flex: 2;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.manga-card p {
-    margin-bottom: 3px;
+.character-sheet-preview {
+    background-color: #0d0d0d;
+    border: 2px solid var(--Cor_Primaria);
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
 
-.manga-card .Date {
-    color: #00000080;
-}
-
-.flag-icon {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    font-size: 1.8rem;
-    border-radius: 3px;
-    padding: 2px;
-    z-index: 2;
-}
-
-
-/*================= CONTAINER LATERAL ======================*/
-
-.containerlay {
-    margin: 0 auto;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.maintenance-box {
-    background: #e7f0fa;
-    border-left: 4px solid var(--Cor_Primaria);
-    padding: 8px 12px;
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.arrowdash {
-    color: var(--Cor_Primaria);
-    margin-right: 4px;
-}
-
-.banner img {
+.sheet-placeholder {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.updates h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-left: 5px solid black;
-    padding-left: 10px;
-}
-
-.updates-list {
-    font-size: 14px;
-    line-height: 1.4;
-    max-height: 180px;
-    padding-right: 5px;
-}
-
-.update-item {
-    margin-bottom: 12px;
-}
-
-.date {
-    color: #999;
-    font-size: 12px;
-    display: block;
-    margin-bottom: 2px;
 }

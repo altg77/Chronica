@@ -48,123 +48,84 @@ body {
 }
 
 main {
-  margin-bottom: 10%;
+  margin-bottom: 2%;
   transition: padding-top 0.3s ease;
+  background-color: #000;
 }
 
 /*================= HEADER ======================*/
 header {
-    background-color: #000; /* Dark background for the header */
-    color: #fff; /* White text color */
-    padding: 10px 0; /* Add some vertical padding */
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--Cor_Primaria);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.288);
 }
 
 .navbar {
-    background-color: #000 !important; /* Ensure navbar background is black */
-    padding: 0; /* Remove default navbar padding */
+  background-color: #000 !important;
+  padding: 0;
 }
 
 .navbar-expand-lg .navbar-collapse {
-    justify-content: center; /* Center the navigation links */
+  justify-content: center;
 }
 
 .container-fluid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Distribute items horizontally */
-    max-width: 1200px; /* Limit max width for better appearance */
-    margin: 0 auto; /* Center the container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo-container {
-    margin-right: 20px; /* Space between logo and menu items */
+  margin-right: 20px;
 }
 
 #logo {
-    height: 40px; /* Adjust logo height as needed */
-    width: auto; /* Maintain aspect ratio */
+  height: 40px;
+  width: auto;
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #fff !important; /* White color for all nav links */
-    font-size: 1.1em; /* Slightly larger font size */
-    padding: 10px 15px; /* Padding for links */
+  color: #fff !important;
+  font-size: 1.1em;
+  padding: 10px 15px;
 }
 
 .navbar-nav .nav-item .nav-link.active {
-    font-weight: bold; /* Bold for active link */
+  font-weight: bold;
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #ccc !important; /* Lighter color on hover */
+  color: #ccc !important;
 }
 
-/* Styling for the profile picture dropdown */
 .navbar-nav .dropdown-toggle img {
-    border-radius: 50%; /* Make the image circular */
-    height: 40px; /* Size of the profile image */
-    width: 40px;
-    object-fit: cover; /* Ensure the image covers the area */
-    border: 2px solid #fff; /* White border around the profile pic */
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  border: 2px solid #fff;
 }
 
-/* Adjust dropdown menu styling */
 .dropdown-menu {
-    background-color: #1a1a1a; /* Darker background for dropdown */
-    border: 1px solid #333; /* Darker border */
+  background-color: #1a1a1a;
+  border: 1px solid #333;
 }
 
 .dropdown-menu .dropdown-item {
-    color: #fff; /* White text for dropdown items */
+  color: #fff;
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: #333; /* Darker background on hover */
-    color: #fff;
+  background-color: #333;
+  color: #fff;
 }
 
 .dropdown-menu .dropdown-divider {
-    border-top: 1px solid #555; /* Lighter divider */
-}
-
-/* Bottom rainbow border */
-.header-bottom-border {
-    height: 5px; /* Height of the border */
-    background: linear-gradient(to right,
-        red,
-        orange,
-        yellow,
-        green,
-        blue,
-        indigo,
-        violet);
-    width: 100%;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        background-color: #000; /* Dark background for collapsed menu */
-        padding: 15px;
-        margin-top: 10px;
-    }
-
-    .navbar-nav {
-        align-items: flex-start; /* Align items to start in collapsed view */
-    }
-
-    .navbar-nav .nav-item {
-        width: 100%; /* Full width for items in collapsed view */
-        text-align: center; /* Center text */
-    }
-
-    .navbar-nav .dropdown-menu {
-        text-align: center; /* Center dropdown items */
-    }
-
-    .navbar-toggler {
-        filter: invert(1); /* Make the toggler icon white */
-    }
+  border-top: 1px solid #555;
 }
 
 
@@ -212,7 +173,7 @@ footer {
   color: #000;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
   color: var(--Cor_Primaria);
 }
 

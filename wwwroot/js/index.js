@@ -13,7 +13,7 @@ function mudarSlide(n) {
 // Função para mostrar o slide atual clicando no indicador
 function slideAtual(n) {
     mostrarSlides(indiceSlide = n);
-    reiniciarIntervalo(); // Reinicia o temporizador após navegação manual
+    reiniciarIntervalo(); 
 }
 
 function mostrarSlides(n) {
