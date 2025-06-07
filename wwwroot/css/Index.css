@@ -152,7 +152,7 @@
 }
 
 .digital-sheets-section .content-left h1 {
-    font-size: 5.5em;
+    font-size: 4.5em;
     margin-bottom: 20px;
     color: #ffffff;
 }
@@ -198,13 +198,13 @@
 /* ==== COMUNNITY SECTION ===== */
 
 .community-section {
-    background-color: var(--Cor_Secundaria); 
+    background-color: var(--Cor_Secundaria);
     padding: 80px 0;
 }
 
 .community-section .container {
     justify-content: space-between;
-    gap: 60px; 
+    gap: 60px;
 }
 
 .community-section .content-left,
@@ -216,9 +216,9 @@
 .community-section .section-image {
     max-width: 100%;
     height: auto;
-    border-radius: 50%; 
+    border-radius: 50%;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-    background-color: #330066; 
+    background-color: #330066;
     padding: 20px;
 }
 
@@ -237,13 +237,13 @@
 
 .community-section .features-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-bottom: 40px;
 }
 
 .community-section .feature-item {
-    background-color: #2a003d; 
+    background-color: #2a003d;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -252,7 +252,7 @@
 .community-section .feature-item h3 {
     font-size: 1.4em;
     margin-bottom: 10px;
-    color: #8a2be2; 
+    color: #8a2be2;
 }
 
 .community-section .feature-item p {
@@ -263,7 +263,7 @@
 }
 
 .community-section .join-community-button {
-    background-color: #ff4500; 
+    background-color: #ff4500;
     color: #ffffff;
     padding: 18px 40px;
     border: none;
@@ -358,7 +358,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* ==== CALL TO ACTION ===== */
+/* ==== TORNE SE UM APOIADOR ===== */
 
 .container-cta {
     max-width: 900px;
@@ -368,8 +368,8 @@
 }
 
 .call-to-action-section {
-    background-color: var(--Cor_Secundaria); 
-    padding-bottom: 50px; 
+    background-color: var(--Cor_Secundaria);
+    padding-bottom: 50px;
     overflow: hidden;
 }
 
@@ -378,16 +378,16 @@
     color: #ffffff;
     margin-bottom: 25px;
     position: relative;
-    padding-bottom: 10px; 
+    padding-bottom: 10px;
 }
 
 .call-to-action-section h2::after {
     content: '';
     display: block;
-    width: 100px; 
+    width: 100px;
     height: 4px;
-    background-color: black; 
-    margin: 10px auto 0; 
+    background-color: black;
+    margin: 10px auto 0;
     border-radius: 2px;
 }
 
@@ -402,15 +402,15 @@
 }
 
 .call-to-action-section .highlight {
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 .call-to-action-section .cta-button {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 5px solid black;
     color: #ffffff;
     padding: 18px 40px;
-    border: none;
     border-radius: 8px;
     font-size: 1.2em;
     cursor: pointer;
@@ -418,7 +418,7 @@
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 0.05em;
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
 }
 
 .call-to-action-section .cta-button:hover {
@@ -428,42 +428,76 @@
 .call-to-action-section .cards-display {
     display: flex;
     justify-content: center;
-    align-items: flex-end; 
-    gap: 0px; 
+    align-items: flex-end;
+    gap: 0px;
     position: relative;
     width: 100%;
-    transform: translateY(20px); 
+    transform: translateY(20px);
 }
 
 .call-to-action-section .cta-card {
-    max-width: 250px; 
+    max-width: 250px;
     height: auto;
     position: relative;
-    z-index: 1; 
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6)); 
+    z-index: 1;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.6));
+    cursor: pointer;
 }
 
+
 .call-to-action-section .cta-card:nth-child(1) {
-    transform: translateX(120px) scale(0.9); 
+    transform: translateX(120px) scale(0.9);
     opacity: 0.7;
     z-index: 0;
 }
+
 .call-to-action-section .cta-card:nth-child(2) {
-    transform: translateX(60px) scale(0.95); 
+    transform: translateX(60px) scale(0.95);
     opacity: 0.85;
     z-index: 1;
 }
+
 .call-to-action-section .cta-card:nth-child(3) {
-    transform: translateX(0) scale(1.05); 
+    transform: translateX(0) scale(1.05);
     z-index: 2;
 }
+
 .call-to-action-section .cta-card:nth-child(4) {
-    transform: translateX(-60px) scale(0.95); 
+    transform: translateX(-60px) scale(0.95);
     opacity: 0.85;
     z-index: 1;
 }
+
 .call-to-action-section .cta-card:nth-child(5) {
     transform: translateX(-120px) scale(0.9);
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.call-to-action-section .cta-card:nth-child(1):hover {
+    transform: translateX(120px) scale(1);
+    z-index: 1;
+}
+
+.call-to-action-section .cta-card:nth-child(2):hover {
+    transform: translateX(60px) scale(1);
+    opacity: 0.85;
+    z-index: 1;
+}
+
+.call-to-action-section .cta-card:nth-child(3):hover {
+    transform: translateX(0) scale(1.2);
+    z-index: 2;
+}
+
+.call-to-action-section .cta-card:nth-child(4):hover {
+    transform: translateX(-60px) scale(1.1);
+    opacity: 0.85;
+    z-index: 1;
+}
+
+.call-to-action-section .cta-card:nth-child(5):hover {
+    transform: translateX(-120px) scale(1);
     opacity: 0.7;
     z-index: 0;
 }

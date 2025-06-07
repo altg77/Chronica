@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Novo Agente";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/CriarAgente.css" asp-append-version="false" />
+}
+
+@section Scripts {
+    <script src="/js/Agentes.js" </script>
+}
+
+        <div class="conxtaner">
+            <div class="navHeranc">
+                <ul>
+                    <li><a href="#" id="tab-atributos" class="active">Atributos</a></li>
+                    <li><a href="#" id="tab-origem">Origem</a></li>
+                    <li><a href="#" id="tab-classe">Classe</a></li>
+                    <li><a href="#" id="tab-toques-finais">Toques Finais</a></li>
+                </ul>
+            </div>
+
+            <div id="main-content" class="main-content">
+                <div id="atributos-section" class="content-section active">
+                    <p class="attribute-intro">
+                        Quando você cria um personagem, todos os seus atributos começam em 1 e você recebe 4 pontos para distribuir entre eles como quiser. Você também pode reduzir um atributo para 0 para receber 1 ponto adicional. O valor máximo inicial que você pode ter em cada atributo é 3.
+                    </p>
+
+                    <div class="attribute-distribution">
+                        <div class="attribute-circle">
+                            <div class="attribute-center">
+                                <h2>ATRIBUTOS</h2>
+                                <p>Pontos disponíveis: <span id="available-points">4</span></p>
+                            </div>
+
+                            <div class="attribute-item agi">
+                                <span class="attribute-value" id="val-agi">1</span>
+                                <span class="attribute-label">AGILIDADE</span>
+                                <span class="attribute-abbr">AGI</span>
+                                <div class="attribute-controls">
+                                    <button class="btn-decrease" data-attr="agi">-</button>
+                                    <button class="btn-increase" data-attr="agi">+</button>
+                                </div>
+                            </div>
+                            <div class="attribute-item int">
+                                <span class="attribute-value" id="val-int">1</span>
+                                <span class="attribute-label">INTELECTO</span>
+                                <span class="attribute-abbr">INT</span>
+                                <div class="attribute-controls">
+                                    <button class="btn-decrease" data-attr="int">-</button>
+                                    <button class="btn-increase" data-attr="int">+</button>
+                                </div>
+                            </div>
+                            <div class="attribute-item vig">
+                                <span class="attribute-value" id="val-vig">1</span>
+                                <span class="attribute-label">VIGOR</span>
+                                <span class="attribute-abbr">VIG</span>
+                                <div class="attribute-controls">
+                                    <button class="btn-decrease" data-attr="vig">-</button>
+                                    <button class="btn-increase" data-attr="vig">+</button>
+                                </div>
+                            </div>
+                            <div class="attribute-item pre">
+                                <span class="attribute-value" id="val-pre">1</span>
+                                <span class="attribute-label">PRESENÇA</span>
+                                <span class="attribute-abbr">PRE</span>
+                                <div class="attribute-controls">
+                                    <button class="btn-decrease" data-attr="pre">-</button>
+                                    <button class="btn-increase" data-attr="pre">+</button>
+                                </div>
+                            </div>
+                            <div class="attribute-item for">
+                                <span class="attribute-value" id="val-for">1</span>
+                                <span class="attribute-label">FORÇA</span>
+                                <span class="attribute-abbr">FOR</span>
+                                <div class="attribute-controls">
+                                    <button class="btn-decrease" data-attr="for">-</button>
+                                    <button class="btn-increase" data-attr="for">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="origem-section" class="content-section">
+                    <h2>Origem</h2>
+                    <p>Conteúdo da seção Origem.</p>
+                </div>
+                <div id="classe-section" class="content-section">
+                    <h2>Classe</h2>
+                    <p>Conteúdo da seção Classe.</p>
+                </div>
+                <div id="toques-finais-section" class="content-section">
+                    <h2>Toques Finais</h2>
+                    <p>Conteúdo da seção Toques Finais.</p>
+                </div>
+            </div>
+        </div>

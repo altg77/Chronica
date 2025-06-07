@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Agentes";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/agentes.css" asp-append-version="false" />
+}
+
+@section Scripts {
+    <script src="/js/Agentes.js" </script>
+}
+
+        <Section class="Corpo">
+            <div class="cont">
+                <div class="headeriti">
+                    <h1>@ViewData["Title"] 2/15</h1>
+                    <div class="search-bar">
+                        <a class="Buttom" asp-controller="Agentes" asp-action="CriarAgente" >+ Novo Agente</a>
+                    </div>
+                </div>
+
+                <main class="main-content">
+
+                    <div class="card">
+
+                        <div class="card-header-actions">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle save" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                       <img src="/img/tres-pontos.png" alt="">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Compartilhar</a></li>
+                                        <li><a class="dropdown-item" href="#">Duplicar</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item Sair" href="#">Deletar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://dimensaosete.com.br/static/7fc311549694666167a49cdb0fb1293c/2493a/gojo.webp" alt="Satoru Gojo">
+                            <div class="card-info">
+                                <span class="grade">GRAU ESPECIAL</span>
+                                <h2>Satoru Gojo</h2>
+                                <span class="status">Slowed</span>
+                            </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-header-actions">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle save" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="/img/tres-pontos.png" alt="">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Compartilhar</a></li>
+                                        <li><a class="dropdown-item" href="#">Duplicar</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item Sair" href="#">Deletar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://wallpapers.com/images/hd/sukuna-human-sorcerer-xjixgtkkwa2ovcwy.jpg" alt="Ryomen Sukuna">
+                            <div class="card-info">
+                                <span class="grade">GRAU ESPECIAL</span>
+                                <h2>Ryomen Sukuna</h2>
+                                <span class="status">Slowed</span>
+                            </div>
+                    </div>  
+                </main>
+            </div >
+
+        </Section >

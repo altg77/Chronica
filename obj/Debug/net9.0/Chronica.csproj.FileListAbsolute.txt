@@ -19,7 +19,6 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.csht
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\scopedcss\bundle\Chronica.styles.css
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\scopedcss\projectbundle\Chronica.bundle.scp.css
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\c87ww5exy9-61n19gt1b8.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\dku6yprfs2-xtxxf3hu2r.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\8aj20l3tkv-bqjiyaj88i.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\pomoxsueqy-c2jlpeoesf.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\c4fcwtxy5u-erw9l3u2r3.gz
@@ -90,4 +89,9 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\refint\Chronica.dll
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.pdb
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.genruntimeconfig.cache
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\ref\Chronica.dll
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\sl27215m1g-btyxijzahh.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\sl27215m1g-w4crtopneg.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\dku6yprfs2-nw49hako70.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\ztb7nr82sk-15mgx0r40x.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\rws77r97e9-w9zf5kde0s.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\qsk9ymro4p-qse4yqhoeh.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\n5rlgji4ph-fesvbcu8yi.gz
