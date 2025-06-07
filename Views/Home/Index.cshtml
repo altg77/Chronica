@@ -1,74 +1,123 @@
 ﻿@{
-  ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home";
 }
 
 @section Styles {
-  <link rel="stylesheet" href="/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="/css/Home/Index.css" asp-append-version="true" />
 }
-
 @section Scripts {
-  <script src="/js/index.js"></script>
+    <script src="/js/Home/index.js" </script>
 }
+        <section class="Carrossel" id="Topo">
+            <div class="carrossel-container">
 
-<section class="home">
-  <div class="contn">
-    <div class="carrossel-container">
-      <div class="carrossel-slide">
-        <img src="https://blog.coleco.com.br/wp-content/uploads/2023/05/op_m.jpg" alt="Imagem 1">
-        <div class="conteudo-slide">
-          <h2>Libere o seu mundo マンゴー</h2>
-          <p>Crie sua própria história, compartilhe sua alma. Bem-vindo ao Japão do seu universo.</p>
-          <a href="#" class="botao-slide">Ver mais</a>
+                <div class="carrossel-slide">
+                    <img src="https://blog.coleco.com.br/wp-content/uploads/2023/05/op_m.jpg" alt="Imagem 1">
+                        <div class="conteudo-slide">
+                            <h2>Ordem Paranormal: O RPG</h2>
+                            <p>Mergulhe em um universo de horror e mistério, onde o Paranormal é uma ameaça constante. Escolha sua classe, investigue rituais e lute contra criaturas de outras realidades.</p>
+                            <a href="#" class="botao-slide">Ver mais</a>
+                        </div>
+                </div>
+
+                <div class="carrossel-slide">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/106/109/184/dungeons-and-dragons-jedd-chevrier-dungeons-and-dragons-curse-of-strahd-tabletop-role-playing-game-in-the-fantasy-genre-hd-wallpaper-preview.jpg" alt="Imagem 2">
+                        <div class="conteudo-slide">
+                            <h2>Dungeons & Dragons</h2>
+                            <p>Explore masmorras perigosas, enfrente monstros lendários e embarque em épicas jornadas em um mundo de fantasia sem limites. Crie seu herói e forje seu próprio destino.</p>
+                            <a href="#" class="botao-slide">Ver mais</a>
+                        </div>
+                </div>
+
+                <div class="carrossel-slide">
+                    <img src="https://wallpapercat.com/w/full/0/f/4/24693-3840x2160-desktop-4k-jujutsu-kaisen-tv-series-background-photo.jpg" alt="Imagem 3">
+                        <div class="conteudo-slide">
+                            <h2>Jujutsu Kaisen: Cursed RPG</h2>
+                            <p>Torne-se um feiticeiro Jujutsu e exorcize maldições. Use energia amaldiçoada para combater ameaças sobrenaturais e proteger a humanidade neste RPG de ação intensa.</p>
+                            <a href="#" class="botao-slide">Ver mais</a>
+                        </div>
+                </div>
+
+                <div class="indicadores">
+                    <span class="indicador" onclick="slideAtual(1)"></span>
+                    <span class="indicador" onclick="slideAtual(2)"></span>
+                    <span class="indicador" onclick="slideAtual(3)"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="digital-sheets-section" >
+            <div class="cont">
+                <div class="content-left">
+                    <h1>Fichas Digitais</h1>
+                    <p>Acesso rápido e simplificado a todas as informações de sua ficha. Faça a rolagem de perícias, atributos e ataques com um único clique. Concentre-se menos na matemática e foque no que realmente importa que é se divertir ao lado de seus amigos!</p>
+                    <button class="create-sheet-button">Criar ficha</button>
+                </div>
+                <div class="content-right">
+                    <img src="https://imgv2-2-f.scribdassets.com/img/document/525047100/original/7360b207d2/1?v=1" alt="Exemplo de Ficha Digital" class="character-sheet-display">
+                </div>
+            </div>
+</section >
+
+<section class="community-section">
+    <div class="cont">
+        <div class="content-left">
+            <img src="https://ordemparanormal.com.br/wp-content/uploads/2024/08/Bestial_em_Desconjura3Fo-1024x729.webp" alt="Encontre Jogadores" class="section-image">
         </div>
-      </div>
-
-      <div class="carrossel-slide">
-        <img
-          src="https://images.ctfassets.net/swt2dsco9mfe/3WePejQtg6J2tTFkZpPHCT/903b0c0021602c6083e1eacb3e955392/dnd_home_ddb_lorecard.png?q=70&w=1342"
-          alt="Imagem 2">
-        <div class="conteudo-slide">
-          <h2>Suzume: Portas do Destino</h2>
-          <p>Uma jornada emocionante onde Suzume deve fechar portas místicas por todo o Japão, enfrentando a perda e
-            descobrindo coragem em um mundo lindamente animado.</p>
-          <a href="#" class="botao-slide">Ver mais</a>
+        <div class="content-right">
+            <h2>Encontre seu Grupo Ideal</h2>
+            <p>Conecte-se com jogadores de RPG em todo o mundo. Seja para uma aventura de um dia ou uma campanha épica, nossa comunidade te ajuda a encontrar o grupo perfeito para sua próxima sessão.</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>Matchmaking Inteligente</h3>
+                    <p>Encontre jogadores com base em seus interesses e horários.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Chat Integrado</h3>
+                    <p>Comunique-se facilmente com seu grupo e planeje suas sessões.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Fóruns de Discussão</h3>
+                    <p>Compartilhe ideias, dicas e histórias com a comunidade.</p>
+                </div>
+            </div>
+            <button class="join-community-button">Junte-se à Comunidade</button>
         </div>
-      </div>
-
-      <div class="carrossel-slide">
-        <img
-          src="https://wallpapers-clan.com/wp-content/uploads/2024/04/sukuna-red-jujutsu-kaisen-desktop-wallpaper-preview.jpg"
-          alt="Imagem 3">
-        <div class="conteudo-slide">
-          <h2>鳥山明 Akira</h2>
-          <p>Criador de Dragon Ball, Akira Toriyama transformou o mundo dos mangás com seu estilo artístico icônico e
-            histórias inesquecíveis cheias de ação, humor e emoção. Seu legado continua a inspirar gerações.</p>
-          <a href="#" class="botao-slide">Ver mais</a>
-        </div>
-      </div>
-
-      <div class="indicadores">
-        <span class="indicador" onclick="slideAtual(1)"></span>
-        <span class="indicador" onclick="slideAtual(2)"></span>
-        <span class="indicador" onclick="slideAtual(3)"></span>
-      </div>
-    </div>
-
-
-    <div class="Desc">
-      <section class="left-panel">
-        <h1>Fichas Digitais</h1>
-        <p>Acesso rápido e simplificado a todas as informações de sua ficha. Faça a rolagem de perícias, atributos e
-          ataques com um <strong>único clique</strong>. Concentre-se menos na matemática e foque no que realmente
-          importa
-          que é se divertir ao lado de seus amigos!</p>
-        <button class="create-sheet-btn">Criar ficha</button>
-      </section>
-
-      <section class="right-panel">
-        <div class="character-sheet-preview">
-          <img src="https://imgv2-2-f.scribdassets.com/img/document/525047100/original/7360b207d2/1?v=1"
-            alt="Character Sheet Preview" class="sheet-placeholder">
-        </div>
-      </section>
     </div>
 </section>
+
+<section class="campaign-management-section">
+    <div class="cont">
+        <div class="content-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYVxu3Y_kCVvhlb6qMFI8HW9sRURbpxpTCEQ&s" alt="Mapa de Campanha" class="section-icon">
+            <h2>Gerenciamento de Campanhas</h2>
+            <p>Do conceito à conclusão, organize suas aventuras com ferramentas intuitivas. Crie mapas, gerencie encontros, construa mundos e mantenha o controle de cada detalhe da sua narrativa.</p>
+            <ul>
+                <li>Planejador de Sessões</li>
+                <li>Criador de NPCs Dinâmicos</li>
+                <li>Banco de Dados de Itens e Magias</li>
+            </ul>
+            <button class="learn-more-button">Explorar Ferramentas</button>
+        </div>
+        <div class="content-right">
+            <img src="https://m.media-amazon.com/images/I/71j0JUnD5pL.jpg" alt="Exemplo de Mapa de Campanha" class="section-image">
+        </div>
+    </div>
+</section>
+
+<section class="call-to-action-section">
+    <div class="container-cta">
+        <h2>Torne-se uma Apoiador</h2>
+        <p>Já imaginou ter acesso <span class="highlight">exclusivo</span> e totalmente <span class="highlight">antecipado</span> a todas as novidades de nossa plataforma? Considere apoiar em nosso Catarse.</p>
+        <button class="cta-button">Quero Apoiar o CHRONICA</button>
+        <div class="cards-display">
+            <img src="https://images.vexels.com/content/195059/preview/military-rank-icon-630c68.png" alt="Card Amarelo" class="cta-card">
+            <img src="https://images.vexels.com/content/195059/preview/military-rank-icon-630c68.png" alt="Card Rosa" class="cta-card">
+            <img src="https://images.vexels.com/content/195059/preview/military-rank-icon-630c68.png" alt="Card Roxo" class="cta-card">
+            <img src="https://images.vexels.com/content/195059/preview/military-rank-icon-630c68.png" alt="Card Verde" class="cta-card">
+            <img src="https://images.vexels.com/content/195059/preview/military-rank-icon-630c68.png" alt="Card Azul" class="cta-card">
+        </div>
+    </div>
+</section>
+

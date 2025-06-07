@@ -4,28 +4,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chronica | @ViewData["Title"]</title>
+    <title>CHRONICA | @ViewData["Title"]</title>
+
+    <link rel="shortcut icon" href="/img/Favicon.png" type="image/x-icon">
+    @await RenderSectionAsync("Styles", required: false)
+
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
-    <link rel="shortcut icon" href="/img/Favicon.png" type="image/x-icon">
-
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Chronica.styles.css" asp-append-version="true" />
-    @await RenderSectionAsync("Styles", required: false)
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
 </head>
 
-<body>
+<body id="Topo">
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
 
                 <div class="logo-container">
                     <a asp-controller="Home" asp-action="Index">
-                        <img src="/img/Cronicaslogo1.png" alt="Logo do site" id="logo" />
+                        <img src="/img/Logo.png" alt="Logo do site" id="logo" />
                     </a>
                 </div>
+
+                <form class="d-flex" role="search">
+                    <div class="input-wrapper">
+                        <input class="form-control me-2" type="search" placeholder="O que você quer buscar?"
+                            aria-label="Pesquisar" />
+                        <button class="btnn" type="submit"><img src="/img/lupa.png"></button>
+                    </div>
+                </form>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -36,47 +46,54 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="Home"
+                            <a class="nav-link" aria-current="page" asp-controller="Home"
                                 asp-action="Index">Campanhas</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="Agentes"
-                                asp-action="Index">Agentes</a>
+                            <a class="nav-link" aria-current="page" asp-controller="Home" asp-action="Index">Agentes</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="Home"
-                                asp-action="Index">Ameaças</a>
+                            <a class="nav-link" aria-current="page" asp-controller="Home" asp-action="Index">Ameaças</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                Universe
+                                Universo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Habilidades</a></li>
-                                <li><a class="dropdown-item" href="#">Itens</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Habilidades</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Itens</a></li>
+
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Familias & Clãns</a></li>
-                                <li><a class="dropdown-item" href="#">Raças</a></li>
+
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Familias</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Raças</a></li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">MANUAL DO MESTRE</a></li>
                             </ul>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" asp-controller="Home"
-                                asp-action="Index">Classes</em></a>
+                            <a class="nav-link" aria-current="page" asp-controller="Home" asp-action="Index">Classes</a>
                         </li>
+
                     </ul>
                 </div>
+
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            <img src="https://img.freepik.com/fotos-gratis/ilustracao-de-olhos-de-anime_23-2151660487.jpg?semt=ais_hybrid&w=740"
+                            <img src="https://wallpapers.com/images/hd/cute-anime-profile-pictures-hf5vd8c7ywpbvgvf.jpg"
                                 alt="Foto de Perfil">
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
@@ -86,7 +103,10 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Sair</a></li>
+
+                            <li><a class="dropdown-item Sair" asp-controller="Usuario"
+                                    asp-action="Configuracoes">Sair</a></li>
+                            <li>
                         </ul>
                     </li>
                 </ul>
@@ -94,25 +114,58 @@
         </nav>
     </header>
 
-    <div class="cont">
+    <div>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Chronica - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <section class="footer-main">
+            <div class="footer-logo">
+                <a asp-controller="Home" asp-action="Index">
+                    <img src="/img/Logo.png" alt="Penkai Logo" />
+                </a>
+            </div>
+
+            <div class="custom-footer">
+                <div class="footer-grid">
+                    <div class="footer-column">
+                        <a href="#">Sobre CHRONICA</a>
+                        <a href="#">Entre em contato</a>
+                        <a href="#">Created by Altg77</a>
+                    </div>
+                    <div class="footer-column">
+                        <a href="#">Torne-se uma Apoiador</a>
+                        <a href="#">Política de Privacidade</a>
+                    </div>
+                </div>
+
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="#" aria-label="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="#" aria-label="X (antigo Twitter)"><i class="fab fa-twitter"></i></a>
+                </div>
+
+                <hr class="footer-separator">
+
+                <div class="footer-copyright">
+                    <p>&copy; 2025, odos os direitos reservados à Chronica.</p>
+
+                    <p>Chronica is your RPG organization platform, made by a fan for fans, to make your campaigns more
+                        epic and organized! ©Chronica LLC.</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
     </footer>
 
-    
     <div class="bussola">
-        <a href="#topo">
+        <a href="#Topo">
             <img src="/img/Favicon.png" alt="Guia">
         </a>
     </div>
-
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
