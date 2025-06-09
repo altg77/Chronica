@@ -51,7 +51,8 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" asp-controller="Agentes" asp-action="Index">Agentes</a>
+                            <a class="nav-link" aria-current="page" asp-controller="Agentes"
+                                asp-action="Index">Agentes</a>
                         </li>
 
                         <li class="nav-item">
@@ -64,7 +65,10 @@
                                 Universo
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Habilidades</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Habilidades</a>
+                                </li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Pericias</a>
+                                </li>
                                 <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">Itens</a></li>
 
                                 <li>
@@ -78,7 +82,8 @@
                                     <hr class="dropdown-divider">
                                 </li>
 
-                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">MANUAL DO MESTRE</a></li>
+                                <li><a class="dropdown-item" asp-controller="Home" asp-action="Index">MANUAL DO
+                                        MESTRE</a></li>
                             </ul>
                         </li>
 
@@ -137,7 +142,7 @@
                     </div>
                     <div class="footer-column">
                         <a href="#">Torne-se uma Apoiador</a>
-                        <a href="#">Política de Privacidade</a>
+                        <a asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
                     </div>
                 </div>
 

@@ -1,0 +1,10 @@
+namespace Chronica.Models
+{
+    public class ClaOuFamilia
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Descricao { get; set; }
+        public ICollection<Personagem> Personagens { get; set; } = new List<Personagem>(); // Changed from Agentes to Personagens
+    }
+}

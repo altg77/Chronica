@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         for: 1
     };
 
-    let availablePoints = 4;
+    let availablePoints = 5;
     const maxAttributeValue = 3;
     const minAttributeValue = 0; 
 
