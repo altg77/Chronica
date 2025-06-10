@@ -13,10 +13,10 @@ namespace Chronica.Models
         // Novos DbSets para gerenciar dados de jogos predefinidos
         public DbSet<Habilidade> Habilidade { get; set; } // Represents "Habilidade de Nascença", "Kekijutsu", "Respiração", etc.
         public DbSet<SubHabilidade> SubHabilidades { get; set; } // Specific techniques like "Vazio Roxo", "Black Flash"
-        public DbSet<Item> ItemTipos { get; set; } // Predefined items
-        public DbSet<ClaOuFamilia> ClaOuFamilias { get; set; }
+        public DbSet<Item> Item { get; set; } // Predefined items
+        public DbSet<Origem> Origem { get; set; }
         public DbSet<Classe> Classes { get; set; }
-        public DbSet<Pericia> PericiaTipos { get; set; } // Predefined skill types
+        public DbSet<Pericia> Pericia { get; set; } // Predefined skill types
         public DbSet<VarianteRacial> VariantesRaciais { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -64,7 +64,7 @@ namespace Chronica.Models
             modelBuilder.Entity<SubHabilidade>()
                 .HasOne(sh => sh.Habilidade)
                 .WithMany(ht => ht.SubHabilidades)
-                .HasForeignKey(sh => sh.HabilidadeTipoId)
+                .HasForeignKey(sh => sh.HabilidadeId)
                 .IsRequired();
 
 
@@ -100,9 +100,9 @@ namespace Chronica.Models
 
             // Personagem to ClaOuFamilia (One-to-Many)
             modelBuilder.Entity<Personagem>()
-                .HasOne(p => p.ClaOuFamilia)
+                .HasOne(p => p.Origem)
                 .WithMany(c => c.Personagens) // Changed from Agentes to Personagens
-                .HasForeignKey(p => p.ClaOuFamiliaId)
+                .HasForeignKey(p => p.OrigemId)
                 .IsRequired(false);
 
 
