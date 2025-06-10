@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Pericias";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/pericias.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="/js/Pericias.js"</script>
+}
+
+        <!-- Menu de Abas -->
+        <div class="menu">
+            <span class="aba ativa" data-aba="ameacas">AMEAÇAS</span>
+            <span class="aba" data-aba="habilidades">HABILIDADES</span>
+            <span class="aba" data-aba="rituais">RITUAIS</span>
+            <span class="aba" data-aba="itens">ITENS</span>
+        </div>
+
+        < !--Conteúdo de cada aba(já incluído no HTML)-- >
+            <div id="abas-conteudo">
+                <div class="aba-conteudo" id="aba-ameacas">
+                    <h2>Ameaças</h2>
+                    <p>Lista de ameaças aqui...</p>
+                </div>
+
+                <div class="aba-conteudo" id="aba-habilidades">
+                    <div class="header-habilidades">
+                        <strong>Homebrew 2/50</strong>
+                        <button class="btn-adicionar">Adicionar</button>
+                    </div>
+
+                    <div class="habilidade-card">
+                        <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                            <span class="seta">&#9660;</span>
+                            <span><strong>Nova Habilidade</strong></span>
+                            <button class="btn-compartilhar">COMPARTILHAR</button>
+                        </div>
+                        <div class="habilidade-detalhes" style="display: none;">
+                            <p><strong>Atributo necessário:</strong> Inteligência</p>
+                            <p><strong>Descrição:</strong> Permite ao usuário lançar uma bola de fogo causando 3d6 de dano.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="aba-conteudo" id="aba-rituais">
+                    <h2>Rituais</h2>
+                    <p>Conteúdo de rituais aqui...</p>
+                </div>
+
+                <div class="aba-conteudo" id="aba-itens">
+                    <h2>Itens</h2>
+                    <p>Inventário ou lista de itens aqui...</p>
+                </div>
+            </div>

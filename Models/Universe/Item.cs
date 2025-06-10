@@ -5,7 +5,8 @@ namespace Chronica.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        public string ImagemURL { get; set; } // URL da imagem do personagem
+        public string Tipo { get; set; }
+        public string ImagemURL { get; set; }
 
         public ICollection<PersonagemItem> PersonagemItens { get; set; } = new List<PersonagemItem>(); // Changed to PersonagemItem
     }

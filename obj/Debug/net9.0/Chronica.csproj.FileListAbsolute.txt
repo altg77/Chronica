@@ -338,3 +338,5 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\refint\Chronica.dll
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.pdb
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.genruntimeconfig.cache
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\ref\Chronica.dll
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\up39jel0b0-8jsr23anuz.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\spcbc2u77t-68ua8ow9jr.gz
