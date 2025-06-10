@@ -5,15 +5,37 @@
     box-sizing: border-box;
 }
 
-/* Removed .menu, .aba, .aba.ativa styles */
+.menu {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.aba {
+  color: #888;;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.aba:hover {
+  color: #eee;
+}
+
+.aba.ativa {
+  color: var(--Cor_Primaria);
+  border-bottom: 2px solid var(--Cor_Primaria);
+}
 
 .aba-conteudo {
   margin-top: 4%;
-  /* display: none; Removed, as it will always be visible now */
+  display: none;
 }
 
 .aba-conteudo.ativa {
-  display: block; /* Ensures content is always visible */
+  display: block;
 }
 
 .header-habilidades {
@@ -73,7 +95,15 @@
 .seta {
   font-size: 18px;
   color: var(--Cor_Primaria);
-  transition: transform 0.3s ease; /* Added for smooth rotation */
+}
+
+.btn-compartilhar {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--Cor_Primaria);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .habilidade-detalhes {
@@ -81,16 +111,4 @@
   background-color: #292929;
   padding: 10px;
   border-radius: 6px;
-  overflow: hidden; /* Ensures smooth collapse */
-  transition: max-height 0.3s ease-out; /* Smooth transition for height */
-  max-height: 0; /* Initially hidden */
-}
-
-.habilidade-detalhes.active {
-  max-height: 200px; /* Adjust as needed for content height */
-  transition: max-height 0.3s ease-in;
-}
-
-.habilidade-topo .seta.rotated {
-  transform: rotate(180deg); /* Rotate the arrow when active */
 }

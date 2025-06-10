@@ -1,39 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const abas = document.querySelectorAll(".aba");
-  const conteudos = document.querySelectorAll(".aba-conteudo");
-
-  abas.forEach(aba => {
-    aba.addEventListener("click", () => {
-      const nomeAba = aba.dataset.aba;
-
-      // Trocar classe visual no menu
-      abas.forEach(a => a.classList.remove("ativa"));
-      aba.classList.add("ativa");
-
-      // Mostrar conteúdo correspondente
-      conteudos.forEach(c => {
-        c.classList.remove("ativa");
-        if (c.id === "aba-" + nomeAba) {
-          c.classList.add("ativa");
-        }
-      });
-    });
-  });
-
-  // Iniciar com Habilidades visível, se preferir outra, troque "habilidades"
-  document.querySelector('.aba[data-aba="habilidades"]').click();
-});
-
-// Expande ou recolhe os detalhes da habilidade
+// Expands or collapses the ability details
 function toggleDetalhes(elem) {
   const seta = elem.querySelector(".seta");
   const detalhes = elem.nextElementSibling;
 
-  if (detalhes.style.display === "none" || detalhes.style.display === "") {
-    detalhes.style.display = "block";
-    seta.innerHTML = "&#9650;";
+  // Toggle the 'active' class for the details to control max-height
+  detalhes.classList.toggle("active");
+
+  // Toggle the 'rotated' class for the arrow
+  seta.classList.toggle("rotated");
+
+  // Update the arrow icon based on visibility (optional, can be done with CSS rotation)
+  if (detalhes.classList.contains("active")) {
+    seta.innerHTML = "&#9650;"; // Up arrow
   } else {
-    detalhes.style.display = "none";
-    seta.innerHTML = "&#9660;";
+    seta.innerHTML = "&#9660;"; // Down arrow
   }
 }
