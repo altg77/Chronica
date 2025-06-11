@@ -14,6 +14,6 @@ namespace Chronica.Models
 
         public int HabilidadeTipoId { get; set; }
         public HabilidadeTipo HabilidadeTipo { get; set; }
-        public ICollection<PersonagemHabilidades> PersonagemHabilidades { get; set; } = new List<PersonagemHabilidade>(); // Changed to PersonagemSubHabilidade
+        public ICollection<PersonagemHabilidade> PersonagemHabilidades { get; set; } = new List<PersonagemHabilidade>(); 
     }
 }

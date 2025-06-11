@@ -64,8 +64,8 @@ namespace Chronica.Models
 
         // Coleções para relacionamentos muitos-para-muitos
         // Elas serão vinculadas às tabelas de junção
+        public ICollection<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; } = new List<PersonagemTipoHabilidade>();
         public ICollection<PersonagemHabilidade> PersonagemHabilidades { get; set; } = new List<PersonagemHabilidade>();
-        public ICollection<PersonagemSubHabilidade> PersonagemSubHabilidades { get; set; } = new List<PersonagemSubHabilidade>();
         public ICollection<PersonagemItem> PersonagemItens { get; set; } = new List<PersonagemItem>();
         public ICollection<PersonagemPericia> PersonagemPericias { get; set; } = new List<PersonagemPericia>();
     }
