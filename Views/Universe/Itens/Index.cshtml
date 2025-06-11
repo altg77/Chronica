@@ -13,10 +13,32 @@
         <section class="conxtaner">
      <!-- Menu de Abas -->
             <div class="menu">
+                <span class="aba" data-aba="Todos">Todos Itens</span>
                 <span class="aba" data-aba="Selos">Selos e Talismãs</span>
                 <span class="aba" data-aba="objetosAmald">Objetos Amaldiçoados </span>
                 <span class="aba" data-aba="Reliquias">Relíquias e Artefatos Antigos</span>
                 <span class="aba" data-aba="itens">Itens Rituais</span>
+            </div>
+
+            <div class="aba-conteudo" id="aba-Todos">
+
+                <div class="header-habilidades">
+                    <strong>Todos Itens 1/200</strong>
+                    <button class="btn-adicionar">Adicionar</button>
+                </div>
+
+                <div class="habilidade-card">
+                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Dedos de Sukuna</strong></span>
+                        <button class="btn-compartilhar">COMPARTILHAR</button>
+                    </div>
+                    <div class="habilidade-detalhes" style="display: none;">
+                        <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana uma energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
+                            Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do hospedeiro, tornando-se um risco existencial.</p>
+                    </div>
+                </div>
+
             </div>
 
             <div id="abas-conteudo">
@@ -26,6 +48,7 @@
                 </div>
 
                 <div class="aba-conteudo" id="aba-objetosAmald">
+
                     <div class="header-habilidades">
                         <strong>Objetos Amaldiçoados 1/50</strong>
                         <button class="btn-adicionar">Adicionar</button>
@@ -56,4 +79,3 @@
                 </div>
             </div>
         </section>
-

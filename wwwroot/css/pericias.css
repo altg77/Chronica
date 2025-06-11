@@ -1,19 +1,16 @@
 .conxtaner {
-    border-radius: 8px;
-    margin-inline: 10%;
-    padding: 90px 90px;
-    box-sizing: border-box;
+  border-radius: 8px;
+  margin-inline: 10%;
+  padding: 90px 90px;
+  box-sizing: border-box;
 }
-
-/* Removed .menu, .aba, .aba.ativa styles */
 
 .aba-conteudo {
   margin-top: 4%;
-  /* display: none; Removed, as it will always be visible now */
 }
 
 .aba-conteudo.ativa {
-  display: block; /* Ensures content is always visible */
+  display: block;
 }
 
 .header-habilidades {
@@ -21,6 +18,10 @@
   justify-content: space-between;
   margin-bottom: 15px;
   color: white;
+}
+
+.header-habilidades h2 {
+  font-weight: bold;
 }
 
 .btn-adicionar {
@@ -73,7 +74,7 @@
 .seta {
   font-size: 18px;
   color: var(--Cor_Primaria);
-  transition: transform 0.3s ease; /* Added for smooth rotation */
+  transition: transform 0.3s ease;
 }
 
 .habilidade-detalhes {
@@ -81,16 +82,32 @@
   background-color: #292929;
   padding: 10px;
   border-radius: 6px;
-  overflow: hidden; /* Ensures smooth collapse */
-  transition: max-height 0.3s ease-out; /* Smooth transition for height */
-  max-height: 0; /* Initially hidden */
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
 }
 
 .habilidade-detalhes.active {
-  max-height: 200px; /* Adjust as needed for content height */
+  max-height: 200px;
   transition: max-height 0.3s ease-in;
 }
 
 .habilidade-topo .seta.rotated {
-  transform: rotate(180deg); /* Rotate the arrow when active */
+  transform: rotate(180deg);
+}
+
+.btn-compartilhar {
+  background-color: transparent;
+  color: white;
+  border: 1px solid var(--Cor_Primaria);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.habilidade-detalhes {
+  margin-top: 10px;
+  background-color: #292929;
+  padding: 10px;
+  border-radius: 6px;
 }

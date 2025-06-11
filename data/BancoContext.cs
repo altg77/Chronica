@@ -11,64 +11,68 @@ namespace Chronica.Models
         public DbSet<Personagem> Personagens { get; set; }
 
         // Novos DbSets para gerenciar dados de jogos predefinidos
-        public DbSet<Habilidade> Habilidade { get; set; } // Represents "Habilidade de Nascença", "Kekijutsu", "Respiração", etc.
-        public DbSet<SubHabilidade> SubHabilidades { get; set; } // Specific techniques like "Vazio Roxo", "Black Flash"
+        public DbSet<HabilidadeTipo> HabilidadeTipos { get; set; } // Represents "Habilidade de Nascença", "Kekijutsu", "Respiração", etc.
+        public DbSet<Habilidade> SubHabilidades { get; set; } // Specific techniques like "Vazio Roxo", "Black Flash"
         public DbSet<Item> Item { get; set; } // Predefined items
         public DbSet<Origem> Origem { get; set; }
         public DbSet<Classe> Classes { get; set; }
-        public DbSet<Pericia> Pericia { get; set; } // Predefined skill types
+        public DbSet<Pericia> Pericia { get; set; }
         public DbSet<VarianteRacial> VariantesRaciais { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure Table-Per-Hierarchy (TPH) for Personagem, AgentesModel, and AmeaçasModel
-            // EF Core will automatically create a 'Discriminator' column to differentiate types
+            // Configuração de Herança TPH (Table-Per-Hierarchy)
             modelBuilder.Entity<Personagem>()
-                .HasDiscriminator<string>("TipoPersonagem") // 'TipoPersonagem' will be the column name
-                .HasValue<AgentesModel>("Agente")           // Value for AgentesModel
-                .HasValue<AmeacasModel>("Ameaca");          // Value for AmeaçasModel
+                .HasDiscriminator<string>("TipoPersonagem")
+                .HasValue<AgentesModel>("Agente")
+                .HasValue<AmeacasModel>("Ameaca");
 
-            // Define relationships (these remain largely the same, but refer to PersonagemId)
+            // === CONFIGURAÇÕES DOS RELACIONAMENTOS ATUALIZADOS ===
 
-            // Personagem to HabilidadeTipo (Many-to-Many through PersonagemHabilidade)
+            // Personagem to HabilidadeTipo (Many-to-Many through PersonagemHabilidadeTipo)
+            modelBuilder.Entity<PersonagemTipoHabilidade>()
+                .HasKey(pht => new { pht.PersonagemId, pht.HabilidadeTipoId });
+
+            modelBuilder.Entity<PersonagemTipoHabilidade>()
+                .HasOne(pht => pht.Personagem)
+                .WithMany(p => p.PersonagemTipoHabilidades)
+                .HasForeignKey(pht => pht.PersonagemId);
+
+            modelBuilder.Entity<PersonagemTipoHabilidade>()
+                .HasOne(pht => pht.HabilidadeTipo)
+                .WithMany(ht => ht.PersonagemTipoHabilidades)
+                .HasForeignKey(pht => pht.HabilidadeTipoId);
+
+            // Personagem to Habilidades (Many-to-Many through PersonagemHabilidades)
             modelBuilder.Entity<PersonagemHabilidade>()
-                .HasKey(ph => new { ph.PersonagemId, ph.HabilidadeTipoId });
+                .HasKey(ph => new { ph.PersonagemId, ph.HabilidadeId }); // ATUALIZADO
 
             modelBuilder.Entity<PersonagemHabilidade>()
                 .HasOne(ph => ph.Personagem)
-                .WithMany(p => p.PersonagemHabilidades)
+                .WithMany(p => p.PersonagemHabilidades) // ATUALIZADO: Coleção em Personagem
                 .HasForeignKey(ph => ph.PersonagemId);
 
             modelBuilder.Entity<PersonagemHabilidade>()
-                .HasOne(ph => ph.Habilidade)
-                .WithMany(ht => ht.PersonagemHabilidades)
-                .HasForeignKey(ph => ph.HabilidadeTipoId);
+                .HasOne(ph => ph.Habilidade) // ATUALIZADO
+                .WithMany(h => h.PersonagemHabilidades) // ATUALIZADO: Coleção em Habilidades
+                .HasForeignKey(ph => ph.HabilidadeId); // ATUALIZADO
+
+            // HabilidadeTipo to Habilidades (One-to-Many)
+            modelBuilder.Entity<Habilidade>() // ATUALIZADO
+                .HasOne(h => h.HabilidadeTipo)
+                .WithMany(ht => ht.Habilidades) // ATUALIZADO: Coleção em HabilidadeTipo
+                .HasForeignKey(h => h.HabilidadeTipoId)
+                .IsRequired(); // Uma Habilidades deve pertencer a um HabilidadeTipo
 
 
-            // Personagem to SubHabilidade (Many-to-Many through PersonagemSubHabilidade)
-            modelBuilder.Entity<PersonagemSubHabilidade>()
-                .HasKey(psh => new { psh.PersonagemId, psh.SubHabilidadeId });
-
-            modelBuilder.Entity<PersonagemSubHabilidade>()
-                .HasOne(psh => psh.Personagem)
-                .WithMany(p => p.PersonagemSubHabilidades)
-                .HasForeignKey(psh => psh.PersonagemId);
-
-            modelBuilder.Entity<PersonagemSubHabilidade>()
-                .HasOne(psh => psh.SubHabilidade)
-                .WithMany(sh => sh.PersonagemSubHabilidades)
-                .HasForeignKey(psh => psh.SubHabilidadeId);
-
-
-            // HabilidadeTipo to SubHabilidade (One-to-Many)
-            modelBuilder.Entity<SubHabilidade>()
-                .HasOne(sh => sh.Habilidade)
-                .WithMany(ht => ht.SubHabilidades)
-                .HasForeignKey(sh => sh.HabilidadeId)
+            // ItemTipo to Item (One-to-Many)
+            // Um TipoItem (categoria) tem muitos Itens (específicos)
+            modelBuilder.Entity<Item>()
+                .HasOne(i => i.ItemTipo)
+                .WithMany(it => it.Itens)
+                .HasForeignKey(i => i.ItemTipoId)
                 .IsRequired();
 
-
-            // Personagem to ItemTipo (Many-to-Many through PersonagemItem)
             modelBuilder.Entity<PersonagemItem>()
                 .HasKey(pi => new { pi.PersonagemId, pi.ItemId });
 
@@ -79,11 +83,10 @@ namespace Chronica.Models
 
             modelBuilder.Entity<PersonagemItem>()
                 .HasOne(pi => pi.Item)
-                .WithMany(it => it.PersonagemItens)
+                .WithMany(i => i.PersonagemItens)
                 .HasForeignKey(pi => pi.ItemId);
 
-
-            // Personagem to PericiaTipo (Many-to-Many through PersonagemPericia)
+            // Personagem para PericiaTipo (Many-to-Many através de PersonagemPericia)
             modelBuilder.Entity<PersonagemPericia>()
                 .HasKey(pp => new { pp.PersonagemId, pp.PericiaId });
 
@@ -97,11 +100,9 @@ namespace Chronica.Models
                 .WithMany(pt => pt.PersonagemPericias)
                 .HasForeignKey(pp => pp.PericiaId);
 
-
-            // Personagem to ClaOuFamilia (One-to-Many)
             modelBuilder.Entity<Personagem>()
                 .HasOne(p => p.Origem)
-                .WithMany(c => c.Personagens) // Changed from Agentes to Personagens
+                .WithMany(c => c.Personagens)
                 .HasForeignKey(p => p.OrigemId)
                 .IsRequired(false);
 
@@ -109,7 +110,7 @@ namespace Chronica.Models
             // Personagem to Classe (One-to-Many)
             modelBuilder.Entity<Personagem>()
                 .HasOne(p => p.Classe)
-                .WithMany(c => c.Personagens) // Changed from Agentes to Personagens
+                .WithMany(c => c.Personagens)
                 .HasForeignKey(p => p.ClasseId)
                 .IsRequired(false);
 
@@ -117,9 +118,14 @@ namespace Chronica.Models
             // Personagem to VarianteRacial (One-to-Many)
             modelBuilder.Entity<Personagem>()
                 .HasOne(p => p.VarianteRacial)
-                .WithMany(vr => vr.Personagens) // Changed from Agentes to Personagens
+                .WithMany(vr => vr.Personagens)
                 .HasForeignKey(p => p.VarianteRacialId)
                 .IsRequired(false);
+
+            // Configuração para AtributosDeEspirito (mantenha sua escolha, ex: ignorado ou JSON)
+            modelBuilder.Entity<Personagem>().Ignore(p => p.AtributosDeEspirito);
+            // OU
+            // modelBuilder.Entity<Personagem>().Property(p => p.AtributosDeEspirito).HasColumnType("jsonb"); // Para PostgreSQL
         }
     }
 }
