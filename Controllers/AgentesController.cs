@@ -18,8 +18,9 @@ public class AgentesController : Controller
         return View();
     }
 
-     public IActionResult CriarAgente()
+    public IActionResult CriarAgente()
     {
         return View();
     }
 }
+
