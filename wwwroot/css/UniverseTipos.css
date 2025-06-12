@@ -1,12 +1,44 @@
 .conxtaner {
-  border-radius: 8px;
-  margin-inline: 10%;
-  padding: 70px 90px;
-  box-sizing: border-box;
+    border-radius: 8px;
+    margin-inline: 10%;
+    padding: 100px 90px;
+    box-sizing: border-box;
+}
+
+.conxtaner h2{
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  font-size: 400%;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  margin-bottom: 20px;
+}
+
+.aba {
+  color: #888;;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.aba:hover {
+  color: #eee;
+}
+
+.aba.ativa {
+  color: var(--Cor_Primaria);
+  border-bottom: 2px solid var(--Cor_Primaria);
 }
 
 .aba-conteudo {
   margin-top: 4%;
+  display: none;
 }
 
 .aba-conteudo.ativa {
@@ -16,19 +48,9 @@
 .header-habilidades {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 15px;
   color: white;
 }
-
-.header-habilidades h2 {
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-  font-size: 400%;
-  line-height: 1;
-}
-
 
 .btn-adicionar {
   background-color: var(--Cor_Primaria);
@@ -37,9 +59,6 @@
   padding: 6px 12px;
   border-radius: 5px;
   cursor: pointer;
-
-  font-size: 1rem; 
-  white-space: nowrap; 
 }
 
 .buscar-habilidade {
@@ -83,26 +102,6 @@
 .seta {
   font-size: 18px;
   color: var(--Cor_Primaria);
-  transition: transform 0.3s ease;
-}
-
-.habilidade-detalhes {
-  margin-top: 10px;
-  background-color: #292929;
-  padding: 10px;
-  border-radius: 6px;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-  max-height: 0;
-}
-
-.habilidade-detalhes.active {
-  max-height: 200px;
-  transition: max-height 0.3s ease-in;
-}
-
-.habilidade-topo .seta.rotated {
-  transform: rotate(180deg);
 }
 
 .btn-compartilhar {

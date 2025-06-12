@@ -322,7 +322,6 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\kfsiwabu36-mlv21k5csn.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\sl27215m1g-k8nhylsfdr.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\dku6yprfs2-nw49hako70.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\qsk9ymro4p-g7xsaj6aon.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\ztb7nr82sk-w9f51xq5yt.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\n5rlgji4ph-fesvbcu8yi.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\rws77r97e9-d2c5xdvccl.gz
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\d2x4o9c2z0-1d2ogkrvfb.gz
@@ -338,7 +337,8 @@ E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.pdb
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\Chronica.genruntimeconfig.cache
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\ref\Chronica.dll
 E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\0xg7gmfquz-yrjb9sqvb7.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\8bvza0s0zw-zx0pjdekbq.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\spcbc2u77t-ji1nfanscb.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\lazsp19466-93vkg0hzzh.gz
-E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\up39jel0b0-new7r6h3dm.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\whjb8w1wbr-2xf8ca5xdd.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\zjjzss4e45-yamweg6eas.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\lrwf6x1r9s-ji1nfanscb.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\boc88jqbx6-2zi4f1t1sy.gz
+E:\Tiago\Documents\Chronica\obj\Debug\net9.0\compressed\ztb7nr82sk-yzh47tv0mr.gz

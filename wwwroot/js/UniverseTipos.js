@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Iniciar com Habilidades visível, se preferir outra, troque "habilidades"
-  document.querySelector('.aba[data-aba="objetosAmald"]').click();
+  document.querySelector('.aba[data-aba="Todos"]').click();
 });
 
 // Expande ou recolhe os detalhes da habilidade

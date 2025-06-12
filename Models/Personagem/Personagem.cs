@@ -9,42 +9,31 @@ namespace Chronica.Models
         public string ImagemURL { get; set; } 
         public string Nome { get; set; }
         public int Idade { get; set; }
-        
-
-        // Propriedades de Descricao
-
-        [Column(TypeName = "TEXT")]
-        public string Aparencia { get; set; }
-
-        [Column(TypeName = "TEXT")]
-        public string Objetivos { get; set; }
-
-        [Column(TypeName = "TEXT")]
-        public string Historia { get; set; }
-
-        [Column(TypeName = "TEXT")]
-        public string Personalidade { get; set; }
 
 
         //Atributos Principais
-        public int Forca { get; set; }
-        public int Agilidade { get; set; }
-        public int Constituicao { get; set; }
-        public int Espirito { get; set; }
-        public int Intelecto { get; set; }
-        public int Carisma { get; set; }
+        public int Forca { get; set; } // Força do personagem
+        public int Agilidade { get; set; } // Velocidade do personagem
+        public int Constituicao { get; set; } // Vida do personagem
+        public int Espirito { get; set; } // Poder do personagem
+        public int Intelecto { get; set; }  // Pericias do personagem
+        public int Carisma { get; set; } // Pericias do personagem
 
         public int PontosAtributo { get; set; } = 5; // Quantidade de pontos disponíveis para distribuir
 
 
         // Subatributos Calculados
         public int VidaMaxima => Constituicao * 10; // Exemplo de cálculo, ajuste conforme necessário
+
         public int Vida { get; set; } // Vida atual do personagem
+        public int Defesa { get; set; }
+        public int Deslocamento { get; set; }
 
 
-        // Atributo Dinâmico baseado em Espirito
+        // Atributo Dinâmico baseado em Espirito ( Respiracao, Kekijutsu, Energia Amaldiçoada, Chakra, Ki)
         [NotMapped]
         public Dictionary<string, int> AtributosDeEspirito { get; set; } = new Dictionary<string, int>();
+
 
         // Subatributos relacionados a Carisma
         public int Egoismo => Carisma / 2; // Exemplo de cálculo

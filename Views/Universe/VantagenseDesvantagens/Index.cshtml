@@ -1,0 +1,104 @@
+@{
+    ViewData["Title"] = "Vantagens e Desvantagens";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/UniverseTipos.css" asp-append-version="true" />
+}
+
+@section Scripts {
+    <script src="/js/UniverseTipos.js" </script>
+}
+
+        <section class="conxtaner">
+            <h2>@ViewData["Title"]</h2>
+
+            <div class="menu">
+                <span class="aba" data-aba="Todos">Todos</aside></span>
+                <span class="aba" data-aba="Vantagens">Vantagens</span>
+                <span class="aba" data-aba="Desvantagens">Desvantagens</span>
+            </div>
+
+            <div class="aba-conteudo" id="aba-Todos">
+
+                <div class="header-habilidades">
+                    <strong>Todos 2/200</strong>
+                    <button class="btn-adicionar">Adicionar</button>
+                </div>
+
+                <div class="habilidade-card">
+                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Adaptavel</strong></span>
+                        <button class="btn-compartilhar">COMPARTILHAR</button>
+                    </div>
+                    <div class="habilidade-detalhes" style="display: none;">
+                        <p>Por algum motivo seu corpo se adapta mais rápido que o comum a situações
+extremas, caso receba dano de só um tipo por no mínimo três turnos receberá redução de
+dano igual o seu valor de constituição até o fim do combate. (-3)</p>
+                    </div>
+                </div>
+
+                <div class="habilidade-card">
+                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Egoista</strong></span>
+                        <button class="btn-compartilhar">COMPARTILHAR</button>
+                    </div>
+                    <div class="habilidade-detalhes" style="display: none;">
+                        <p>Você é egoísta, sempre que estiver em situações de risco ou utilizando outras
+coisas que seus aliados não possuirem voce nunca irá compartilhar, e sempre tentará fugir
+independentemente da situação caso esteja com ferimentos graves. (-2)</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="aba-conteudo" id="aba-Vantagens">
+
+                 <div class="header-habilidades">
+                    <strong>Vantagens 1/200</strong>
+                    <button class="btn-adicionar">Adicionar</button>
+                </div>
+
+                 <div class="habilidade-card">
+                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Adaptavel</strong></span>
+                        <button class="btn-compartilhar">COMPARTILHAR</button>
+                    </div>
+                    <div class="habilidade-detalhes" style="display: none;">
+                        <p>Por algum motivo seu corpo se adapta mais rápido que o comum a situações
+extremas, caso receba dano de só um tipo por no mínimo três turnos receberá redução de
+dano igual o seu valor de constituição até o fim do combate. (-3)</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="aba-conteudo" id="aba-Desvantagens">
+
+                  <div class="header-habilidades">
+                    <strong>Desvantagens 1/200</strong>
+                    <button class="btn-adicionar">Adicionar</button>
+                </div>
+
+                <div class="habilidade-card">
+                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Egoista</strong></span>
+                        <button class="btn-compartilhar">COMPARTILHAR</button>
+                    </div>
+                    <div class="habilidade-detalhes" style="display: none;">
+                        <p>Você é egoísta, sempre que estiver em situações de risco ou utilizando outras
+coisas que seus aliados não possuirem voce nunca irá compartilhar, e sempre tentará fugir
+independentemente da situação caso esteja com ferimentos graves. (-2)</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        </section >

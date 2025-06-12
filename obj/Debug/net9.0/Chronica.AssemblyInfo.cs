@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chronica")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+852b2dd72ac5382b8f16fea1fef1d45505959ccc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b3345b30735c129e8b553501df7f4af80d6f955")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chronica")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chronica")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
