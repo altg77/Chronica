@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Ameaças";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/ameacas.css" asp-append-version="false" />
+}
+
+@section Scripts {
+    <script src="/js/Ameacas.js" </script>
+}
+
+        <Section class="Corpo">
+            <div class="cont">
+                <div class="headeriti">
+                    <h1>@ViewData["Title"] 5/15</h1>
+                    <div class="search-bar">
+                        <a class="Buttom" asp-controller="" asp-action="" >+ Nova Ameaça</a>
+                    </div>
+                </div>
+
+                <div class="filter-menu">
+                    <div class="filter-option active" data-filter="Todos">Todos</div>
+                    <div class="filter-option" data-filter="FAmaldiçoados">Feiticeiros Amaldiçoado</div>
+                    <div class="filter-option" data-filter="FRenegados">Feiticeiros Renegados</div>
+                    <div class="filter-option" data-filter="Maldição">Maldições</div>
+                    <div class="filter-option" data-filter="Humano">Humanos</div>
+                </div>
+
+                <div class="monster-list" id="monsterList">
+
+                    <div class="monster-item" data-type="FAmaldiçoados" data-name="Sukuna">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSydJ2cVWIR3eg4g7TmVmW-k-0EIL3B682L6g&s" alt="Sukuna">
+                            <div class="monster-details">
+                                <h3>Sukuna</h3>
+                                <p>VD: 500</p>
+                                <p>Rei das Maldições - Grau Especial</p>
+                            </div>
+                            <button class="ficha-button">Ficha</button>
+                    </div>
+
+                    <div class="monster-item" data-type="Maldição" data-name="Jogõ">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCo5OxAsErGBo4C0HsL6FM65UgWRYYgV5Ssw&s" alt="Jogõ">
+                            <div class="monster-details">
+                                <h3>Jogõ</h3>
+                                <p>VD: 450</p>
+                                <p>Grau Especial</p>
+                            </div>
+                            <button class="ficha-button">Ficha</button>
+                    </div>
+
+                    <div class="monster-item" data-type="Maldição" data-name="Maldição Comum">
+                        <img src="https://kanto.legiaodosherois.com.br/w760-h398-cfill/wp-content/uploads/2023/07/legiao_YwQpFdA7z1by.jpg.webp" alt="Maldição Comum">
+                            <div class="monster-details">
+                                <h3>Maldição Figger</h3>
+                                <p>VD: 50</p>
+                                <p>Grau Inferior</p>
+                            </div>
+                            <button class="ficha-button">Ficha</button>
+                    </div>
+
+                    <div class="monster-item" data-type="FRenegados" data-name="Suguru Geto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5x_4V5ZQVKf5TQw568cg5oFwe4oe9Mb4gRg&s" alt="Suguru Geto">
+                            <div class="monster-details">
+                                <h3>Suguru Geto</h3>
+                                <p>VD: 480</p>
+                                <p>Grau Especial</p>
+                            </div>
+                            <button class="ficha-button">Ficha</button>
+                    </div>
+
+                    <div class="monster-item" data-type="Humano" data-name="Toji Fushiguro">
+                        <img src="https://www.comboinfinito.com.br/principal/wp-content/uploads/2023/07/jujutsu-kaisen-toji-fushiguro.jpg" alt="Toji Fushiguro">
+                            <div class="monster-details">
+                                <h3>Toji Fushiguro</h3>
+                                <p>VD: 470</p>
+                                <p>Sem Energia Amaldiçoada - Grau Especial</p>
+                            </div>
+                            <button class="ficha-button">Ficha</button>
+                    </div>
+                </div>
+        </Section >

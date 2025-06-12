@@ -4,18 +4,22 @@ namespace Chronica.Models
 {
     public class AmeacasModel : Personagem
     {
-        public string TipoAmeaca { get; set; } // (e.g., "Monstro", "Vilão", "Armadilha")
-        
-        public List<string> Vulnerabilidades { get; set;}
+
+        // Chave estrangeira para o TipoAmeaca
+        public int TipoAmeacaId { get; set; }
+        public TipoAmeaca TipoAmeaca { get; set; }
+
+
+        public List<string> Vulnerabilidades { get; set; }
 
         public List<string> Imunidade { get; set; }
 
-        public List<string> Resistencia{ get; set; }
+        public List<string> Resistencia { get; set; }
 
 
         //Status
 
-        [Column(TypeName = "TEXT")] 
+        [Column(TypeName = "TEXT")]
         public string Descricao { get; set; }
     }
 }

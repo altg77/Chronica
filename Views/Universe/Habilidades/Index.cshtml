@@ -7,147 +7,88 @@
 }
 
 @section Scripts {
-    <script src="/js/UniverseTipos.js" </script>
+    <script src="/js/UniverseTipos.js" asp-append-version="true"></script>
 }
 
-        <section class="conxtaner">
-            <h2>@ViewData["Title"]</h2>
+<section class="conxtaner">
+    <h2>@ViewData["Title"]</h2>
 
-            <div class="menu">
-                <span class="aba" data-aba="Todos">Todos as Habilidades</aside></span>
-                <span class="aba" data-aba="TecHerdada">Tecnicas Herdadas</span>
-                <span class="aba" data-aba="TecInatas">Tecnicas Inata</span>
-                <span class="aba" data-aba="TecAprendida">Tecnicas Aprendidas</span>
-                <span class="aba" data-aba="Shikigamis">Shikigamis</span>
-                <span class="aba" data-aba="Restricao">Restrição Celestial</span>
+    <div class="filter-menu">
+        <div class="filter-option active" data-filter="Todos">Todas as Habilidades</div>
+        <div class="filter-option" data-filter="TecHerdada">Técnicas Herdadas</div>
+        <div class="filter-option" data-filter="TecInatas">Técnicas Inatas</div>
+        <div class="filter-option" data-filter="TecAprendida">Técnicas Aprendidas</div>
+        <div class="filter-option" data-filter="Shikigamis">Shikigamis</div>
+        <div class="filter-option" data-filter="Restricao">Restrição Celestial</div>
+    </div>
+
+    <div class="item-list" id="itemList">
+
+        <div class="header-habilidades">
+            <strong>Todas as Habilidades 2/200</strong>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
+
+        <div class="item-card" data-type="TecInatas" data-name="Boogie Woogie">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Boogie Woogie</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
             </div>
-
-            <div class="aba-conteudo" id="aba-Todos">
-
-                <div class="header-habilidades">
-                    <strong>Todos Itens 2/200</strong>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>
-
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Boogie Woogie</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p>Aoi Todo pode trocar de lugar com alguma coisa em uma área de 10M que possua sua
-energia amaldiçoada imbuída. Porém, para isso é preciso que o usuário bata palmas,
-podendo uma vez por rodada trocar pessoas de lugar como ação livre.(Condição Única)</p>
-                        <p><strong>Teleporte (2 Slots):</strong>
-Sua técnica inata lhe concede a capacidade de teleportar, porém com a restrição de
-precisar bater palmas</p>
-                    <p><strong>Causar Condições (1 Slot):</strong>
-Pode gastar 4 EA para causar a condição desprevenido no adversário caso o mesmo
-falhe em um teste de reflexos contra sua CD de técnicas padrão
-</p>
-                    </div>
-                </div>
-
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Ilimitado</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p>A técnica inata Ilimitado concede a Satoru Gojo controle absoluto sobre o espaço em um nível atômico. Ele pode manipular a convergência e divergência do espaço para criar diversos efeitos.</p>
-                        <p><strong>Infinito (3 Slots):</strong>
-Cria uma barreira de espaço infinito ao redor de Gojo, fazendo com que ataques físicos e energia amaldiçoada se aproximem infinitamente devagar sem nunca o alcançarem. (Custo: 6 EA / Ação: Reação)</p>
-                   
-                    <p><strong>Lapso Azul (1 Slot):</strong>
-Atrai e converge o espaço, criando uma força de atração devastadora que esmaga o que estiver em seu caminho. (Custo: 8 EA / Ação: Padrão)
-</p>
-                    
-                    <p><strong>Convergência Vermelha (1 Slot):</strong>
- Expande e diverge o espaço, repelindo tudo com uma força avassaladora. (Custo: 8 EA / Ação: Padrão)</p>                    
-
-                    <p><strong>Vazio Roxo (3 Slot):</strong>
- A união de Lapso Azul e Convergência Vermelha. Apaga a existência do que atinge, criando uma massa imaginária que destrói o espaço. (Custo: 15 EA / Ação: Padrão / Condição: Requer domínio de ambas as sub-técnicas)</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="aba-conteudo" id="aba-TecHerdada">
-
-                 <div class="header-habilidades">
-                    <strong>Tecnicas Herdadas 1/200</strong>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>
-
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Ilimitado</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p>A técnica inata Ilimitado concede a Satoru Gojo controle absoluto sobre o espaço em um nível atômico. Ele pode manipular a convergência e divergência do espaço para criar diversos efeitos.</p>
-                        <p><strong>Infinito (3 Slots):</strong>
-Cria uma barreira de espaço infinito ao redor de Gojo, fazendo com que ataques físicos e energia amaldiçoada se aproximem infinitamente devagar sem nunca o alcançarem. (Custo: 6 EA / Ação: Reação)</p>
-                   
-                    <p><strong>Lapso Azul (1 Slot):</strong>
-Atrai e converge o espaço, criando uma força de atração devastadora que esmaga o que estiver em seu caminho. (Custo: 8 EA / Ação: Padrão)
-</p>
-                    
-                    <p><strong>Convergência Vermelha (1 Slot):</strong>
- Expande e diverge o espaço, repelindo tudo com uma força avassaladora. (Custo: 8 EA / Ação: Padrão)</p>                    
-
-                    <p><strong>Vazio Roxo (3 Slot):</strong>
- A união de Lapso Azul e Convergência Vermelha. Apaga a existência do que atinge, criando uma massa imaginária que destrói o espaço. (Custo: 15 EA / Ação: Padrão / Condição: Requer domínio de ambas as sub-técnicas)</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="aba-conteudo" id="aba-TecInatas">
-
-                  <div class="header-habilidades">
-                    <strong>Tecnicas Inata 1/200</strong>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>
-
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Boogie Woogie</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p>Aoi Todo pode trocar de lugar com alguma coisa em uma área de 10M que possua sua
-energia amaldiçoada imbuída. Porém, para isso é preciso que o usuário bata palmas,
-podendo uma vez por rodada trocar pessoas de lugar como ação livre.(Condição Única)</p>
-                        <p><strong>Teleporte (2 Slots):</strong>
-Sua técnica inata lhe concede a capacidade de teleportar, porém com a restrição de
-precisar bater palmas</p>
-                    <p><strong>Causar Condições (1 Slot):</strong>
-Pode gastar 4 EA para causar a condição desprevenido no adversário caso o mesmo
-falhe em um teste de reflexos contra sua CD de técnicas padrão
-</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="aba-conteudo" id="aba-TecAprendida">
-                <h3>Técnicas Aprendidas</h3>
-                <p>Conteúdo de rituais aqui...</p>
-            </div>
-
-            <div class="aba-conteudo" id="aba-Shikigamis">
-                <h3>Shikigamis</h3>
-                <p>Conteúdo de rituais aqui...</p>
-            </div>
-
-            <div class="aba-conteudo" id="aba-Restricao">
-                <h3>Restrição Celestial</h3>
-                <p>Inventário ou lista de itens aqui...</p>
+            <div class="item-detalhes" style="display: none;">
+                <p>Aoi Todo pode trocar de lugar com alguma coisa em uma área de 10M que possua sua energia amaldiçoada imbuída. Porém, para isso é preciso que o usuário bata palmas, podendo uma vez por rodada trocar pessoas de lugar como ação livre.(Condição Única)</p>
+                <p><strong>Teleporte (2 Slots):</strong> Sua técnica inata lhe concede a capacidade de teleportar, porém com a restrição de precisar bater palmas</p>
+                <p><strong>Causar Condições (1 Slot):</strong> Pode gastar 4 EA para causar a condição desprevenido no adversário caso o mesmo falhe em um teste de reflexos contra sua CD de técnicas padrão</p>
             </div>
         </div>
-        </section >
+
+        <div class="item-card" data-type="TecHerdada" data-name="Ilimitado">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Ilimitado</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p>A técnica inata Ilimitado concede a Satoru Gojo controle absoluto sobre o espaço em um nível atômico. Ele pode manipular a convergência e divergência do espaço para criar diversos efeitos.</p>
+                <p><strong>Infinito (3 Slots):</strong> Cria uma barreira de espaço infinito ao redor de Gojo, fazendo com que ataques físicos e energia amaldiçoada se aproximem infinitamente devagar sem nunca o alcançarem. (Custo: 6 EA / Ação: Reação)</p>
+                <p><strong>Lapso Azul (1 Slot):</strong> Atrai e converge o espaço, criando uma força de atração devastadora que esmaga o que estiver em seu caminho. (Custo: 8 EA / Ação: Padrão)</p>
+                <p><strong>Convergência Vermelha (1 Slot):</strong> Expande e diverge o espaço, repelindo tudo com uma força avassaladora. (Custo: 8 EA / Ação: Padrão)</p>
+                <p><strong>Vazio Roxo (3 Slot):</strong> A união de Lapso Azul e Convergência Vermelha. Apaga a existência do que atinge, criando uma massa imaginária que destrói o espaço. (Custo: 15 EA / Ação: Padrão / Condição: Requer domínio de ambas as sub-técnicas)</p>
+            </div>
+        </div>
+
+        <div class="item-card" data-type="TecAprendida" data-name="Técnica de Cura">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Técnica de Cura</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p>Uma técnica aprendida que permite ao usuário curar ferimentos leves usando energia amaldiçoada. (Custo: 5 EA / Ação: Padrão)</p>
+            </div>
+        </div>
+
+        <div class="item-card" data-type="Shikigamis" data-name="Nue">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Nue</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p>Um Shikigami semelhante a um pássaro, capaz de voar e liberar descargas elétricas. (Custo de Invocação: 10 EA)</p>
+            </div>
+        </div>
+
+        <div class="item-card" data-type="Restricao" data-name="Restrição de Voto">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Restrição de Voto</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p>Uma restrição celestial que concede grande poder físico em troca da incapacidade de usar energia amaldiçoada. (Efeito: +5 Força, -10 EA máxima)</p>
+            </div>
+        </div>
+
+    </div>
+</section>

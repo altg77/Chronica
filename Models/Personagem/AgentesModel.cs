@@ -19,6 +19,6 @@ namespace Chronica.Models
         [Column(TypeName = "TEXT")]
         public string Personalidade { get; set; }
         
-        public string Jogador { get; set; }
+        public string Caractere { get; set; }
     }
 }

@@ -1,0 +1,132 @@
+.Corpo {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.cont {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px;
+    flex-grow: 1;
+}
+
+.headeriti {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.headeriti h1 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.Buttom {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--Cor_Primaria);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.Buttom:hover {
+    background-color: black;
+}
+
+.filter-menu {
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.filter-option {
+    color: #888;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.filter-option:hover {
+    color: white;
+}
+
+.filter-option.active {
+    color: var(--Cor_Primaria);
+    border-bottom: 2px solid var(--Cor_Primaria);
+}
+
+.monster-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.monster-item {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #3a3a3a;
+    cursor: pointer;
+}
+
+/* Add a class to hide items */
+.monster-item.hidden {
+    display: none;
+}
+
+.monster-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 5-px;
+    object-fit: cover;
+}
+
+.monster-details {
+    flex-grow: 1;
+}
+
+.monster-details h3 {
+    margin: 0 0 5px 0;
+    color: #e0e0e0;
+}
+
+.monster-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+.monster-item .ficha-button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--Cor_Primaria);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.monster-item .ficha-button:hover {
+    background-color: red;
+}

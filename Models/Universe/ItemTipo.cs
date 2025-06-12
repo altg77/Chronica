@@ -9,6 +9,7 @@ namespace Chronica.Models.Universe
 
         [Column(TypeName = "TEXT")]
         public string Descricao { get; set; }
+        
 
         // Chave estrangeira para o Usuário que criou/é dono deste item
         public int UsuarioId { get; set; }

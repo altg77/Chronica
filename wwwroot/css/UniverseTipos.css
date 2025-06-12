@@ -1,18 +1,22 @@
 .conxtaner {
-    border-radius: 8px;
-    margin-inline: 10%;
-    padding: 100px 90px;
-    box-sizing: border-box;
+  border-radius: 8px;
+  margin-inline: 10%;
+  padding: 100px 90px;
+  box-sizing: border-box;
 }
 
-.conxtaner h2{
+.conxtaner h2 {
   font-weight: bold;
   color: white;
   margin-bottom: 10px;
   font-size: 400%;
 }
 
-.menu {
+.hidden {
+  display: none !important;
+}
+
+.filter-menu {
   display: flex;
   gap: 30px;
   font-weight: bold;
@@ -20,18 +24,18 @@
   margin-bottom: 20px;
 }
 
-.aba {
-  color: #888;;
+.filter-option {
+  color: #888;
   cursor: pointer;
   padding: 10px;
   transition: color 0.3s;
 }
 
-.aba:hover {
+.filter-option:hover {
   color: #eee;
 }
 
-.aba.ativa {
+.filter-option.active {
   color: var(--Cor_Primaria);
   border-bottom: 2px solid var(--Cor_Primaria);
 }
@@ -83,7 +87,7 @@
   color: #ccc;
 }
 
-.habilidade-card {
+.item-card {
   background-color: #1e1e1e;
   padding: 10px 15px;
   border-radius: 6px;
@@ -91,7 +95,7 @@
   color: white;
 }
 
-.habilidade-topo {
+.item-topo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,7 +117,7 @@
   cursor: pointer;
 }
 
-.habilidade-detalhes {
+.item-detalhes {
   margin-top: 10px;
   background-color: #292929;
   padding: 10px;

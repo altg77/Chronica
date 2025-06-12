@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Campanhas";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="/css/agentes.css" asp-append-version="false" />
+}
+
+@section Scripts {
+    <script src="/js/Agentes.js" </script>
+}
+
+        <Section class="Corpo">
+            <div class="cont">
+                <div class="headeriti">
+                    <h1>@ViewData["Title"] 1/15</h1>
+                    <div class="search-bar">
+                        <a class="Buttom" asp-controller="Agentes" asp-action="CriarAgente" >+ Nova Campanha</a>
+                    </div>
+                </div>
+
+                <main class="main-content">
+
+                    <div class="card">
+
+                        <div class="card-header-actions">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle save" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                       <img src="/img/tres-pontos.png" alt="">
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <li><a class="dropdown-item" href="#">Compartilhar</a></li>
+                                        <li><a class="dropdown-item" href="#">Duplicar</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item Sair" href="#">Deletar</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <img src="https://animeflix.com.br/wp-content/uploads/2025/05/jujutsu-kaisen-gege-revela-feiticeiro-supera-gojo-sukuna.jpg" alt="Campanha1">
+                            <div class="card-info">
+                                <span class="grade">25 de Janeiro de 2025 Ás 12:00</span>
+                                <h2>Era das Maldições</h2>
+                            </div>
+                    </div>
+
+                </main>
+            </div >
+
+        </Section >

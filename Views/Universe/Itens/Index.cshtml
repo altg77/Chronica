@@ -7,76 +7,70 @@
 }
 
 @section Scripts {
-    <script src="/js/UniverseTipos.js"</script>
+    <script src="/js/UniverseTipos.js" asp-append-version="true"></script>
 }
 
-        <section class="conxtaner">
-            <h2>@ViewData["Title"]</h2>
+<section class="conxtaner">
+    <h2>@ViewData["Title"]</h2>
 
-            <div class="menu">
-                <span class="aba" data-aba="Todos">Todos Itens</span>
-                <span class="aba" data-aba="Selos">Selos e Talismãs</span>
-                <span class="aba" data-aba="objetosAmald">Objetos Amaldiçoados </span>
-                <span class="aba" data-aba="Reliquias">Relíquias e Artefatos Antigos</span>
-                <span class="aba" data-aba="itens">Itens Rituais</span>
+    <div class="filter-menu">
+        <div class="filter-option active" data-filter="Todos">Todos Itens</div>
+        <div class="filter-option" data-filter="Selos">Selos e Talismãs</div>
+        <div class="filter-option" data-filter="ObjetosAmald">Objetos Amaldiçoados</div>
+        <div class="filter-option" data-filter="Reliquias">Relíquias e Artefatos Antigos</div>
+        <div class="filter-option" data-filter="ItensRituais">Itens Rituais</div>
+    </div>
+
+    <div class="item-list" id="itemList">
+
+        <div class="header-habilidades">
+            <strong>Todos Itens 1/200</strong>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
+
+        <div class="item-card" data-type="ObjetosAmald" data-name="Dedos de Sukuna">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Dedos de Sukuna</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
             </div>
-
-            <div class="aba-conteudo" id="aba-Todos">
-
-                <div class="header-habilidades">
-                    <strong>Todos Itens 1/200</strong>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>
-
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Dedos de Sukuna</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana uma energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
-                            Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do hospedeiro, tornando-se um risco existencial.</p>
-                    </div>
-                </div>
-
+            <div class="item-detalhes" style="display: none;">
+                <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana uma energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
+                    Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do hospedeiro, tornando-se um risco existencial.</p>
             </div>
+        </div>
 
-            <div id="abas-conteudo">
-                <div class="aba-conteudo" id="aba-Selos">
-                    <h3>Selos e Talismãs</h3>
-                    <p>Lista de ameaças aqui...</p>
-                </div>
-
-                <div class="aba-conteudo" id="aba-objetosAmald">
-
-                    <div class="header-habilidades">
-                        <strong>Objetos Amaldiçoados 1/50</strong>
-                        <button class="btn-adicionar">Adicionar</button>
-                    </div>
-
-                    <div class="habilidade-card">
-                        <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                            <span class="seta">&#9660;</span>
-                            <span><strong>Dedos de Sukuna</strong></span>
-                            <button class="btn-compartilhar">COMPARTILHAR</button>
-                        </div>
-                        <div class="habilidade-detalhes" style="display: none;">
-                            <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana uma energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
-                                Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do hospedeiro, tornando-se um risco existencial.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="aba-conteudo" id="aba-Reliquias">
-                    <h3>Rituais</h3>
-                    <p>Conteúdo de rituais aqui...</p>
-                </div>
-
-                <div class="aba-conteudo" id="aba-itens">
-                    <h3>Itens</h3>
-                    <p>Inventário ou lista de itens aqui...</p>
-                </div>
+        <div class="item-card" data-type="Selos" data-name="Selo Místico">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Selo Místico</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
             </div>
-        </section>
+            <div class="item-detalhes" style="display: none;">
+                <p><strong>Descrição:</strong> Um selo antigo com runas de proteção.</p>
+            </div>
+        </div>
+
+        <div class="item-card" data-type="Reliquias" data-name="Amuleto Ancestral">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Amuleto Ancestral</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p><strong>Descrição:</strong> Um amuleto com grande poder de cura.</p>
+            </div>
+        </div>
+
+        <div class="item-card" data-type="ItensRituais" data-name="Vela Ritualística">
+            <div class="item-topo" onclick="toggleDetalhes(this)">
+                <span class="seta">&#9660;</span>
+                <span><strong>Vela Ritualística</strong></span>
+                <button class="btn-compartilhar">COMPARTILHAR</button>
+            </div>
+            <div class="item-detalhes" style="display: none;">
+                <p><strong>Descrição:</strong> Uma vela essencial para rituais de evocação.</p>
+            </div>
+        </div>
+    </div>
+</section>

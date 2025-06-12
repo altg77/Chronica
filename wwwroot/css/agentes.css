@@ -33,32 +33,23 @@
     align-items: center;
 }
 
-.search-bar input {
-    background-color: #333;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    color: #fff;
-    margin-right: 10px;
-    width: 250px;
+
+.Buttom {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: var(--Cor_Primaria); 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
 }
 
-.search-bar input::placeholder {
-    color: #bbb;
-}
-
-.search-bar button {
-    background-color: var(--Cor_Primaria);
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.search-bar button:hover {
-    background-color: black;
+.Buttom:hover {
+    background-color: black; 
 }
 
 .main-content {
@@ -124,24 +115,6 @@
     border: none !important;
 }
 
-
-.Buttom {
-    display: inline-block; 
-    padding: 10px 20px; 
-    background-color: var(--Cor_Primaria); 
-    color: white; 
-    text-align: center; 
-    text-decoration: none; 
-    border-radius: 5px; 
-    border: none; 
-    cursor: pointer; 
-    font-size: 16px; 
-    transition: background-color 0.3s ease; 
-}
-
-.Buttom:hover {
-    background-color: black; 
-}
 
 .card-header-actions .dropdown-toggle::after {
     display: none;

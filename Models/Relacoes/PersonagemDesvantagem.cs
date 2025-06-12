@@ -8,6 +8,6 @@ namespace Chronica.Models.Relacoes
         public Personagem Personagem { get; set; }
 
         public int DesvantagemId { get; set; }
-        public Desvantagens Desvantagem { get; set; } // Propriedade de navegação para a desvantagem
+        public Desvantagens Desvantagem { get; set; }
     }
 }

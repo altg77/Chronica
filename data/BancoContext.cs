@@ -16,6 +16,7 @@ namespace Chronica.Models
         public DbSet<UsuarioCampanha> UsuarioCampanhas { get; set; }
         public DbSet<PersonagemCampanha> PersonagemCampanhas { get; set; }
         public DbSet<Personagem> Personagens { get; set; }
+        public DbSet<TipoAmeaca> TiposAmeaca { get; set; }
 
 
         //Habilidades
@@ -51,6 +52,32 @@ namespace Chronica.Models
                 .HasDiscriminator<string>("TipoPersonagem")
                 .HasValue<AgentesModel>("Agente")
                 .HasValue<AmeacasModel>("Ameaca");
+
+
+            // NOVO: Um Usuário tem muitos Tipos de Ameaça Criados
+            modelBuilder.Entity<TipoAmeaca>()
+                .HasOne(ta => ta.Usuario)
+                .WithMany(u => u.TiposAmeacaCriados) // Precisamos adicionar essa coleção em Usuario.cs
+                .HasForeignKey(ta => ta.UsuarioId)
+                .IsRequired();
+
+            // --- CONFIGURAÇÃO DE COMPARTILHAMENTO VIA CAMPANHA (Existentes) ---
+            modelBuilder.Entity<UsuarioCampanha>().HasKey(uc => new { uc.UsuarioId, uc.CampanhaId });
+            modelBuilder.Entity<UsuarioCampanha>().HasOne(uc => uc.Usuario).WithMany(u => u.UsuarioCampanhas).HasForeignKey(uc => uc.UsuarioId);
+            modelBuilder.Entity<UsuarioCampanha>().HasOne(uc => uc.Campanha).WithMany(c => c.UsuarioCampanhas).HasForeignKey(uc => uc.CampanhaId);
+
+            modelBuilder.Entity<PersonagemCampanha>().HasKey(pc => new { pc.PersonagemId, pc.CampanhaId });
+            modelBuilder.Entity<PersonagemCampanha>().HasOne(pc => pc.Personagem).WithMany(p => p.PersonagemCampanhas).HasForeignKey(pc => pc.PersonagemId);
+            modelBuilder.Entity<PersonagemCampanha>().HasOne(pc => pc.Campanha).WithMany(c => c.PersonagemCampanhas).HasForeignKey(pc => pc.CampanhaId);
+
+
+            // Relacionamento TipoAmeaca para AmeacasModel (One-to-Many) ---
+            // Um TipoAmeaca tem muitas AmeacasModel
+            modelBuilder.Entity<AmeacasModel>()
+                .HasOne(am => am.TipoAmeaca) // Uma AmeacaModel tem um TipoAmeaca
+                .WithMany(ta => ta.Ameacas) // Um TipoAmeaca tem muitas AmeacasModel
+                .HasForeignKey(am => am.TipoAmeacaId) // A chave estrangeira está em AmeacasModel
+                .IsRequired(); // Uma AmeacaModel deve ter um TipoAmeaca
 
             // --- CONFIGURAÇÕES DE RELACIONAMENTOS COM USUÁRIO ---
 
@@ -89,8 +116,6 @@ namespace Chronica.Models
                 .HasForeignKey(ht => ht.UsuarioId)
                 .IsRequired();
 
-            // Repita para ItemTipo, PericiaTipo, Vantagens, Desvantagens, Origem, Classe, VarianteRacial
-            // Se você quiser que esses também sejam "propriedade" de um usuário.
             modelBuilder.Entity<ItemTipo>()
                 .HasOne(it => it.Usuario)
                 .WithMany(u => u.ItemTiposCriados)
