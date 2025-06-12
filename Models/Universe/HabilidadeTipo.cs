@@ -7,9 +7,14 @@ namespace Chronica.Models
         public int Id { get; set; }
         public string Nome { get; set; }
 
-        [Column(TypeName = "TEXT")] 
+        [Column(TypeName = "TEXT")]
         public string Descricao { get; set; }
+
+        // Chave estrangeira para o Usuário que criou/é dono deste item
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+        
         public ICollection<Habilidade> Habilidades { get; set; } = new List<Habilidade>();
-        public ICollection<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; } = new List<PersonagemTipoHabilidade>(); 
+        public ICollection<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; } = new List<PersonagemTipoHabilidade>();
     }
 }

@@ -11,6 +11,14 @@ namespace Chronica.Models
         public string Nome { get; set; }
         public int Idade { get; set; }
 
+        // Chave estrangeira para o Usuário que criou/é dono deste personagem
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
+        
+
+        // NOVO: Coleção para o relacionamento Muitos-para-Muitos com Campanha
+        public ICollection<PersonagemCampanha> PersonagemCampanhas { get; set; } = new List<PersonagemCampanha>();
+
 
         //Atributos Principais
         public int Forca { get; set; } // Força do personagem
@@ -55,7 +63,7 @@ namespace Chronica.Models
         // Coleções para relacionamentos muitos-para-muitos
         // Elas serão vinculadas às tabelas de junção
         public ICollection<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; } = new List<PersonagemTipoHabilidade>();
-        
+
         public ICollection<PersonagemVantagem> PersonagemVantagens { get; set; } = new List<PersonagemVantagem>();
         public ICollection<PersonagemDesvantagem> PersonagemDesvantagens { get; set; } = new List<PersonagemDesvantagem>();
 
