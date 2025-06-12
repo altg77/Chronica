@@ -186,6 +186,13 @@ header {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.dropdown-name{
+  font-size: 150%;
+  text-decoration: none;
+  padding: 8px 15px;
+}
+
+
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: var(--Cor_Primaria);
