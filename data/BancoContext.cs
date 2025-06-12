@@ -1,3 +1,5 @@
+using Chronica.Models.Relacoes;
+using Chronica.Models.Universe;
 using Microsoft.EntityFrameworkCore;
 
 namespace Chronica.Models
@@ -10,14 +12,31 @@ namespace Chronica.Models
 
         public DbSet<Personagem> Personagens { get; set; }
 
-        // Novos DbSets para gerenciar dados de jogos predefinidos
+        //Habilidades
         public DbSet<HabilidadeTipo> HabilidadeTipos { get; set; } // Represents "Habilidade de Nascença", "Kekijutsu", "Respiração", etc.
-        public DbSet<Habilidade> SubHabilidades { get; set; } // Specific techniques like "Vazio Roxo", "Black Flash"
-        public DbSet<Item> Item { get; set; } // Predefined items
+        public DbSet<Habilidade> Habilidades { get; set; } // Specific techniques like "Vazio Roxo", "Black Flash"
+        public DbSet<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; }
+        public DbSet<PersonagemHabilidade> PersonagemHabilidades { get; set; }
+
+        //Itens
+        public DbSet<ItemTipo> ItemTipos { get; set; }
+        public DbSet<Item> Item { get; set; }
+        public DbSet<PersonagemItem> PersonagemItens { get; set; }
+
+        //Pericias
+        public DbSet<Pericia> Pericia { get; set; }
+        public DbSet<PersonagemPericia> PersonagemPericias { get; set; }
+
+        //Outros
         public DbSet<Origem> Origem { get; set; }
         public DbSet<Classe> Classes { get; set; }
-        public DbSet<Pericia> Pericia { get; set; }
         public DbSet<VarianteRacial> VariantesRaciais { get; set; }
+
+        //Vantagens e Desvantagens
+        public DbSet<Vantagens> Vantagens { get; set; } // Certifique-se que o nome do DbSet é plural
+        public DbSet<Desvantagens> Desvantagens { get; set; } // Certifique-se que o nome do DbSet é plural
+        public DbSet<PersonagemVantagem> PersonagemVantagens { get; set; }
+        public DbSet<PersonagemDesvantagem> PersonagemDesvantagens { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -85,6 +104,36 @@ namespace Chronica.Models
                 .HasOne(pi => pi.Item)
                 .WithMany(i => i.PersonagemItens)
                 .HasForeignKey(pi => pi.ItemId);
+
+
+            // Personagem para Vantagens (Many-to-Many através de PersonagemVantagem)
+            modelBuilder.Entity<PersonagemVantagem>()
+                .HasKey(pv => new { pv.PersonagemId, pv.VantagemId }); // Chave composta
+
+            modelBuilder.Entity<PersonagemVantagem>()
+                .HasOne(pv => pv.Personagem)
+                .WithMany(p => p.PersonagemVantagens) // Coleção em Personagem
+                .HasForeignKey(pv => pv.PersonagemId);
+
+            modelBuilder.Entity<PersonagemVantagem>()
+                .HasOne(pv => pv.Vantagem)
+                .WithMany(v => v.PersonagemVantagens) // Coleção em Vantagens
+                .HasForeignKey(pv => pv.VantagemId);
+
+            // Personagem para Desvantagens (Many-to-Many através de PersonagemDesvantagem)
+            modelBuilder.Entity<PersonagemDesvantagem>()
+                .HasKey(pd => new { pd.PersonagemId, pd.DesvantagemId }); // Chave composta
+
+            modelBuilder.Entity<PersonagemDesvantagem>()
+                .HasOne(pd => pd.Personagem)
+                .WithMany(p => p.PersonagemDesvantagens) // Coleção em Personagem
+                .HasForeignKey(pd => pd.PersonagemId);
+
+            modelBuilder.Entity<PersonagemDesvantagem>()
+                .HasOne(pd => pd.Desvantagem)
+                .WithMany(d => d.PersonagemDesvantagens) // Coleção em Desvantagens
+                .HasForeignKey(pd => pd.DesvantagemId);
+
 
             // Personagem para PericiaTipo (Many-to-Many através de PersonagemPericia)
             modelBuilder.Entity<PersonagemPericia>()

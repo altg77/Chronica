@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using Chronica.Models.Relacoes;
 
 namespace Chronica.Models.Universe
 {
@@ -10,6 +11,9 @@ namespace Chronica.Models.Universe
 
         [Column(TypeName = "TEXT")] // For potentially long descriptions
         public string Descricao { get; set; }
+
+        // Coleção para o relacionamento Muitos-para-Muitos com Personagem
+        public ICollection<PersonagemDesvantagem> PersonagemDesvantagens { get; set; } = new List<PersonagemDesvantagem>();
 
     }
 }

@@ -1,12 +1,13 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using Chronica.Models.Relacoes;
 
 namespace Chronica.Models
 {
     public abstract class Personagem
     {
         public int Id { get; set; }
-        public string ImagemURL { get; set; } 
+        public string ImagemURL { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
 
@@ -54,8 +55,13 @@ namespace Chronica.Models
         // Coleções para relacionamentos muitos-para-muitos
         // Elas serão vinculadas às tabelas de junção
         public ICollection<PersonagemTipoHabilidade> PersonagemTipoHabilidades { get; set; } = new List<PersonagemTipoHabilidade>();
+        
+        public ICollection<PersonagemVantagem> PersonagemVantagens { get; set; } = new List<PersonagemVantagem>();
+        public ICollection<PersonagemDesvantagem> PersonagemDesvantagens { get; set; } = new List<PersonagemDesvantagem>();
+
         public ICollection<PersonagemHabilidade> PersonagemHabilidades { get; set; } = new List<PersonagemHabilidade>();
         public ICollection<PersonagemItem> PersonagemItens { get; set; } = new List<PersonagemItem>();
         public ICollection<PersonagemPericia> PersonagemPericias { get; set; } = new List<PersonagemPericia>();
+
     }
 }
