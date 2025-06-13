@@ -1,4 +1,4 @@
-/* ====  TELA CRIAR AGENTE ===== */
+/* ==== TELA CRIAR AGENTE ===== */
 .conxtaner {
     border-radius: 8px;
     margin-inline: 10%;
@@ -50,11 +50,11 @@
 }
 
 .content-section {
-    display: none; 
+    display: none;
 }
 
 .content-section.active {
-    display: block; 
+    display: block;
 }
 
 .content-section h2 {
@@ -65,18 +65,18 @@
 
 .attribute-intro {
     text-align: center;
-    max-width: 700px;
     color: white;
     margin: 0 auto 40px auto;
     line-height: 1.6;
     font-size: 1.1em;
+    max-width: 700px;
 }
 
 .attribute-distribution {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px; /* Adjust as needed */
+    min-height: 500px;
     position: relative;
 }
 
@@ -84,7 +84,7 @@
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    background-color: #222; /* Darker center for the wheel */
+    background-color: #222;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@
 
 .attribute-item {
     position: absolute;
-    width: 120px; /* Size of each attribute box */
+    width: 120px;
     height: 120px;
     background-color: #333;
     border: 1px solid #555;
@@ -209,38 +209,271 @@
 }
 
 .attribute-circle {
-    position: relative; 
+    position: relative;
 }
-
 
 .attribute-item {
     position: absolute;
     transform: translate(-50%, -50%);
 }
 
-
-.attribute-item.agi { 
+.attribute-item.agi {
     top: 5%;
-    left: 50%; 
+    left: 50%;
 }
 
-.attribute-item.int { 
+.attribute-item.int {
     top: 45%;
-    left: 95%; 
+    left: 95%;
 }
 
-.attribute-item.vig { /* Bottom-Right */
+.attribute-item.vig {
     top: 93%;
     left: 75%;
 }
 
-.attribute-item.pre { /* Bottom-Left */
+.attribute-item.pre {
     top: 93%;
     left: 25%;
 }
 
-.attribute-item.for { /* Top-Left */
+.attribute-item.for {
     top: 45%;
-    left: 5%; /* Or use left: 15%; */
+    left: 5%;
 }
 
+.origem-intro {
+    color: white;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+    max-width: 700px;
+}
+
+/*Cards*/
+.Universe-intro {
+    color: white;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.Universe-card {
+    max-width: 700px;
+    background-color: #1e1e1e;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 0 auto 10px auto;
+    color: white;
+}
+
+.Universe-card strong {
+    color: white !important;
+}
+
+.Universe-card strong:hover {
+    color: var(--Cor_Primaria) !important;
+    cursor: pointer;
+}
+
+.Universe-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.seta {
+    font-size: 18px;
+    color: var(--Cor_Primaria);
+    transition: transform 0.3s ease;
+}
+
+.Universe-detalhes {
+    margin-top: 10px;
+    background-color: #292929;
+    padding: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    max-height: 500px;
+}
+
+.Universe-detalhes strong {
+    color: var(--Cor_Primaria) !important;
+}
+
+.aimg {
+    gap: 20px;
+    display: flex;
+}
+
+.Universe-detalhes img {
+    width: 100%;
+    max-width: 90px;
+    height: auto;
+    object-fit: cover;
+}
+
+.Universe-topo .seta.rotated {
+    transform: rotate(180deg);
+}
+
+.btn-acao {
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--Cor_Primaria);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-acao:hover {
+    background-color: var(--Cor_Primaria);
+}
+
+/*Filtragem*/
+.filter-menu {
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20px;
+}
+
+.filter-option {
+    color: #888;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.filter-option:hover {
+    color: #eee;
+}
+
+.filter-option.active {
+    color: var(--Cor_Primaria);
+    border-bottom: 2px solid var(--Cor_Primaria);
+}
+
+.hidden {
+    display: none !important;
+}
+
+strong {
+    color: var(--Cor_Primaria);
+}
+
+/*Variantes*/
+
+.mundano-button {
+    background-color: var(--Cor_Primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.mundano-button:hover {
+    background-color: black;
+}
+
+.class-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.card {
+    background-color: #0c0c0c !important;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid transparent;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card h2{
+    border-bottom: 1px solid var(--Cor_Primaria);
+}
+
+.escolher-button {
+    background-color: var(--Cor_Primaria);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10%;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.class-card {
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-top: 5px solid transparent;
+
+    /* Scrollable Cards --- */
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(53, 53, 53) #444;
+}
+
+.class-card p {
+    margin-bottom: 10% !important;
+}
+
+.class-card::-webkit-scrollbar {
+    width: 8px;
+}
+
+.class-card::-webkit-scrollbar-track {
+    background: #444;
+    border-radius: 10px;
+}
+
+.class-card::-webkit-scrollbar-thumb {
+    background-color: var(--Cor_Primaria);
+    border-radius: 10px;
+    border: 2px solid #2a2a2a;
+}
+
+.class-card h2 {
+    color: var(--Cor_Primaria);
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.class-card p {
+    font-size: 0.95em;
+    color: #cccccc;
+    margin-bottom: 5px;
+    flex-grow: 1;
+}

@@ -14,7 +14,7 @@
     <h2>@ViewData["Title"]</h2>
 
     <div class="filter-menu">
-        <div class="filter-option active" data-filter="Todos">Todos Itens</div>
+        <div class="filter-option active" data-filter="Todos">Todos</div>
         <div class="filter-option" data-filter="Selos">Selos e Talismãs</div>
         <div class="filter-option" data-filter="ObjetosAmald">Objetos Amaldiçoados</div>
         <div class="filter-option" data-filter="Reliquias">Relíquias e Artefatos Antigos</div>
@@ -28,49 +28,46 @@
             <button class="btn-adicionar">Adicionar</button>
         </div>
 
-        <div class="item-card" data-type="ObjetosAmald" data-name="Dedos de Sukuna">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Dedos de Sukuna</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana uma energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
-                    Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do hospedeiro, tornando-se um risco existencial.</p>
-            </div>
+        <div class="Universe-card" data-type="ObjetosAmald" data-name="Dedos de Sukuna">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Dedos de Sukuna</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes aimg">
+                    <img src="https://meusitedeanime.com.br/wp-content/uploads/2024/10/O-Ultimo-Dedo-de-Sukuna-como-Talisma-1024x576.jpg" alt="Dedo Sukuna">
+                    <p><strong>Descrição:</strong> Um fragmento de dedo humano mumificado, escuro e retorcido, que emana
+                        uma
+                        energia amaldiçoada fria e densa ao toque. É um objeto antigo e repulsivo.
+                        Efeito (ao ser consumido): Concede um imenso poder amaldiçoado ao usuário, aumentando força e
+                        resistência. No entanto, o espírito do Rei das Maldições, Sukuna, tentará dominar o corpo do
+                        hospedeiro,
+                        tornando-se um risco existencial.</p>
+                </div>
+            </details>
         </div>
 
-        <div class="item-card" data-type="Selos" data-name="Selo Místico">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Selo Místico</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p><strong>Descrição:</strong> Um selo antigo com runas de proteção.</p>
-            </div>
+        <div class="Universe-card" data-type="ObjetosAmald" data-name="Espada de Toji">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Espada de Toji</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes aimg">
+                    <img src="https://ae01.alicdn.com/kf/S030aa1a536d34ca4b361872d2f0d9839n.jpg" alt="Espada de Toji">
+                    <p><strong>Descrição:</strong> Uma espada especial usada por Toji Fushiguro, conhecida pela sua
+                        capacidade de cortar através de energia amaldiçoada com facilidade.</p>
+                </div>
+            </details>
         </div>
 
-        <div class="item-card" data-type="Reliquias" data-name="Amuleto Ancestral">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Amuleto Ancestral</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p><strong>Descrição:</strong> Um amuleto com grande poder de cura.</p>
-            </div>
-        </div>
-
-        <div class="item-card" data-type="ItensRituais" data-name="Vela Ritualística">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Vela Ritualística</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p><strong>Descrição:</strong> Uma vela essencial para rituais de evocação.</p>
-            </div>
-        </div>
     </div>
 </section>

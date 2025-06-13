@@ -31,24 +31,6 @@
     align-items: center;
 }
 
-.Buttom {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--Cor_Primaria);
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.Buttom:hover {
-    background-color: black;
-}
-
 .filter-menu {
     display: flex;
     gap: 30px;
@@ -74,6 +56,25 @@
     border-bottom: 2px solid var(--Cor_Primaria);
 }
 
+.Buttom {
+    display: inline-block; 
+    padding: 10px 20px; 
+    background-color: var(--Cor_Primaria); 
+    color: white; 
+    text-align: center; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.Buttom:hover {
+    background-color: black; 
+}
+
+
 .monster-list {
     display: flex;
     flex-direction: column;
@@ -91,7 +92,6 @@
     cursor: pointer;
 }
 
-/* Add a class to hide items */
 .monster-item.hidden {
     display: none;
 }
@@ -128,5 +128,6 @@
 }
 
 .monster-item .ficha-button:hover {
-    background-color: red;
+    background-color: black;
+    color: var(--Cor_Primaria);
 }

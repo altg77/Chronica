@@ -1,8 +1,10 @@
 let indiceSlide = 1;
 let slideIntervalo; // Variável para o intervalo de tempo
 
-mostrarSlides(indiceSlide);
-iniciarIntervalo(); // Inicia a transição automática
+document.addEventListener('DOMContentLoaded', () => {
+    mostrarSlides(indiceSlide);
+    iniciarIntervalo(); // Inicia a transição automática
+});
 
 // Função para avançar ou retroceder os slides
 function mudarSlide(n) {

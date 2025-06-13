@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Vantagens e Desvantagens";
+    ViewData["Title"] = "Modificadores";
 }
 
 @section Styles {
@@ -26,48 +26,76 @@
             <button class="btn-adicionar">Adicionar</button>
         </div>
 
-        <div class="item-card" data-type="Vantagens" data-name="Adaptavel">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Adaptável</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p>Por algum motivo seu corpo se adapta mais rápido que o comum a situações extremas. Caso receba dano de um só tipo por no mínimo três turnos, você receberá redução de dano igual ao seu valor de constituição até o fim do combate. (-3)</p>
-            </div>
+        <div class="Universe-card" data-type="Vantagens" data-name="Adaptavel">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Adaptável</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p>Por algum motivo seu corpo se adapta mais rápido que o comum a situações extremas. Caso receba
+                        dano de um só tipo por no mínimo três turnos, você receberá redução de dano igual ao seu valor
+                        de constituição até o fim do combate. (-3)</p>
+                </div>
+            </details>
         </div>
 
-        <div class="item-card" data-type="Desvantagens" data-name="Egoista">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Egoísta</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p>Você é egoísta. Sempre que estiver em situações de risco ou utilizando recursos que seus aliados não possuam, você nunca irá compartilhar. Além disso, você sempre tentará fugir independentemente da situação caso esteja com ferimentos graves. (-2)</p>
-            </div>
+        <div class="Universe-card" data-type="Desvantagens" data-name="Egoista">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Egoísta</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p>Você é egoísta. Sempre que estiver em situações de risco ou utilizando recursos que seus aliados
+                        não
+                        possuam, você nunca irá compartilhar. Além disso, você sempre tentará fugir independentemente da
+                        situação caso esteja com ferimentos graves. (-2)</p>
+                </div>
+            </details>
         </div>
 
-        <div class="item-card" data-type="Vantagens" data-name="Sorte Inata">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Sorte Inata</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p>A sorte parece estar sempre ao seu lado. Uma vez por sessão, você pode rolar novamente um dado que falhou. (+1)</p>
-            </div>
+        <div class="Universe-card" data-type="Vantagens" data-name="Sorte Inata">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Sorte Inata</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p>A sorte parece estar sempre ao seu lado. Uma vez por sessão, você pode rolar novamente um dado
+                        que
+                        falhou. (+1)</p>
+                </div>
+            </details>
         </div>
 
-        <div class="item-card" data-type="Desvantagens" data-name="Alergia a Gatos">
-            <div class="item-topo" onclick="toggleDetalhes(this)">
-                <span class="seta">&#9660;</span>
-                <span><strong>Alergia a Gatos</strong></span>
-                <button class="btn-compartilhar">COMPARTILHAR</button>
-            </div>
-            <div class="item-detalhes" style="display: none;">
-                <p>Você tem uma alergia severa a gatos. A proximidade com gatos pode causar espirros, coceira e, em casos graves, dificuldade para respirar. (-1)</p>
-            </div>
+        <div class="Universe-card" data-type="Desvantagens" data-name="Alergia a Gatos">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Alergia a Gatos</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p>Você tem uma alergia severa a gatos. A proximidade com gatos pode causar espirros, coceira e, em
+                        casos graves, dificuldade para respirar. (-1)</p>
+                </div>
+            </details>
         </div>
 
     </div>

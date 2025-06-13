@@ -35,7 +35,6 @@
   margin-bottom: 20px;
 }
 
-
 .btn-adicionar {
   background-color: var(--Cor_Primaria);
   color: white;
@@ -48,29 +47,24 @@
   white-space: nowrap;
 }
 
-.buscar-habilidade {
-  position: relative;
-  margin-bottom: 15px;
-}
 
-.buscar-habilidade input {
-  width: 100%;
-  padding: 10px 35px 10px 40px;
-  border-radius: 5px;
-  border: none;
-  background-color: #1e1e1e;
+
+/*Cards*/
+
+.Universe-intro {
+  max-width: 700px;
   color: white;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  font-size: 1.1em;
 }
 
-.icone-busca {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  font-size: 18px;
-  color: #ccc;
+.button-group {
+  display: flex;
+  gap: 10px;
 }
 
-.habilidade-card {
+.Universe-card {
   background-color: #1e1e1e;
   padding: 10px 15px;
   border-radius: 6px;
@@ -78,7 +72,11 @@
   color: white;
 }
 
-.habilidade-topo {
+.Universe-card strong:hover {
+  color: var(--Cor_Primaria);
+}
+
+.Universe-topo {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,26 +90,26 @@
   transition: transform 0.3s ease;
 }
 
-.habilidade-detalhes {
+.Universe-detalhes {
   margin-top: 10px;
   background-color: #292929;
   padding: 10px;
   border-radius: 6px;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  max-height: 0;
+  max-height: 500px;
 }
 
-.habilidade-detalhes.active {
-  max-height: 200px;
-  transition: max-height 0.3s ease-in;
+.aimg {
+  gap: 20px;
+  display: flex;
 }
 
-.habilidade-topo .seta.rotated {
+.Universe-topo .seta.rotated {
   transform: rotate(180deg);
 }
 
-.btn-compartilhar {
+.btn-acao {
   background-color: transparent;
   color: white;
   border: 1px solid var(--Cor_Primaria);
@@ -120,9 +118,6 @@
   cursor: pointer;
 }
 
-.habilidade-detalhes {
-  margin-top: 10px;
-  background-color: #292929;
-  padding: 10px;
-  border-radius: 6px;
+.btn-acao:hover {
+  background-color: var(--Cor_Primaria);
 }

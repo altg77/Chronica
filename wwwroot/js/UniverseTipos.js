@@ -1,21 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const filterOptions = document.querySelectorAll('.filter-option');
-    const itemCards = document.querySelectorAll('.item-card');
+    const itemCards = document.querySelectorAll('.Universe-card');
 
     let currentFilter = 'Todos';
 
-    // Function to toggle item details (keep this as you had it)
-    window.toggleDetalhes = (element) => {
-        const itemDetalhes = element.nextElementSibling;
-        const seta = element.querySelector('.seta');
-        if (itemDetalhes.style.display === 'none') {
-            itemDetalhes.style.display = 'block';
-            seta.innerHTML = '&#9650;'; // Up arrow
-        } else {
-            itemDetalhes.style.display = 'none';
-            seta.innerHTML = '&#9660;'; // Down arrow
-        }
-    };
+    document.querySelectorAll("details").forEach((detail) => {
+        detail.addEventListener("toggle", () => {
+            const arrow = detail.querySelector(".seta");
+            if (detail.open) {
+                arrow.classList.add("rotated");
+            } else {
+                arrow.classList.remove("rotated");
+            }
+        });
+    });
 
     function filterItems() {
         itemCards.forEach(item => {

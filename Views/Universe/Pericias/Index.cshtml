@@ -7,44 +7,57 @@
 }
 
 @section Scripts {
-    <script src="/js/Universe.js" </script>
+    <script src="/js/Universe.js" asp-append-version="true"></script>
 }
 
-        <section class="conxtaner">
-            <div class="aba-conteudo ativa">
+<section class="conxtaner">
+    <div class="aba-conteudo ativa">
 
-                <div class="header-habilidades">
-                    <h2>@ViewData["Title"]</h2>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>    
+        <div class="header-habilidades">
+            <h2>@ViewData["Title"]</h2>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
 
-                <div class="Cararcere">
-                    <strong>Todos Itens 2/200</strong>
+        <div class="Cararcere">
+            <strong>Todos Itens 2/200</strong>
+        </div>
+
+        <div class="Universe-card">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Conhecimento Amaldiçoado</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p><strong>Atributo necessário:</strong> Inteligência</p>
+                    <p><strong>Descrição:</strong> Ter familiaridade com o mundo Jujutsu, suas regras, rituais, clãs e
+                        figuras importantes.</p>
                 </div>
+            </details>
+        </div>
 
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Conhecimento Amaldiçoado</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
+        <div class="Universe-card">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Armas Amaldiçoadas</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
                     </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p><strong>Atributo necessário:</strong> Inteligência</p>
-                        <p><strong>Descrição:</strong> Ter familiaridade com o mundo Jujutsu, suas regras, rituais, clãs e figuras importantes.</p>
-                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p><strong>Atributo necessário:</strong> Força</p>
+                    <p><strong>Descrição:</strong> Para usar armas imbuídas de energia amaldiçoada ou armas tradicionais
+                        de
+                        forma eficaz em combate.</p>
                 </div>
+            </details>
+        </div>
 
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Armas Amaldiçoadas</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p><strong>Atributo necessário:</strong> Força</p>
-                        <p><strong>Descrição:</strong> Para usar armas imbuídas de energia amaldiçoada ou armas tradicionais de forma eficaz em combate.</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+    </div>
+</section>

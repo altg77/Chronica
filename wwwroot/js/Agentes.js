@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.dropdown-item.Sair').forEach(button => {
         button.addEventListener('click', (event) => {
-            event.preventDefault(); 
+            event.preventDefault();
 
             const card = button.closest('.card');
-            const agentName = card ? card.querySelector('h2').textContent : 'este agente'; 
+            const agentName = card ? card.querySelector('h2').textContent : 'este agente';
 
             if (confirm(`Tem certeza que deseja sair de "${agentName}"? Isso o deletará.`)) {
                 alert(`Você saiu de "${agentName}". (Ação de exclusão simulada)`);
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let availablePoints = 5;
     const maxAttributeValue = 3;
-    const minAttributeValue = 0; 
+    const minAttributeValue = 0;
 
     const availablePointsSpan = document.getElementById('available-points');
 
@@ -90,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Remove 'active' class from current active tab
             document.querySelector('.navHeranc a.active').classList.remove('active');
-            // Add 'active' class to clicked tab
             event.target.classList.add('active');
 
             // Hide all content sections
@@ -103,4 +102,49 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(targetSectionId).classList.add('active');
         });
     });
+});
+
+document.querySelectorAll("details").forEach((detail) => {
+    detail.addEventListener("toggle", () => {
+        const arrow = detail.querySelector(".seta");
+        if (detail.open) {
+            arrow.classList.add("rotated");
+        } else {
+            arrow.classList.remove("rotated");
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterOptions = document.querySelectorAll('.filter-option');
+    const itemCards = document.querySelectorAll('.Universe-card');
+
+    let currentFilter = 'Todos';
+
+    function filterItems() {
+        itemCards.forEach(item => {
+            const itemType = item.dataset.type; // Get type from data-type attribute
+
+            const matchesFilter = currentFilter === 'Todos' || itemType === currentFilter;
+
+            if (matchesFilter) {
+                item.classList.remove('hidden'); // Show the item
+            } else {
+                item.classList.add('hidden'); // Hide the item
+            }
+        });
+    }
+
+    // Event listeners for filter options
+    filterOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            filterOptions.forEach(opt => opt.classList.remove('active'));
+            option.classList.add('active');
+            currentFilter = option.dataset.filter;
+            filterItems(); // Call the filtering function
+        });
+    });
+
+    // Initial call to filter items when the page loads
+    filterItems();
 });

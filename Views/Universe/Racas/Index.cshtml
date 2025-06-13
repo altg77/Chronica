@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Raças";
+    ViewData["Title"] = "Variantes";
 }
 
 @section Styles {
@@ -7,47 +7,56 @@
 }
 
 @section Scripts {
-    <script src="/js/Universe.js" </script>
+    <script src="/js/Universe.js" asp-append-version="true"></script>
 }
 
-        <section class="conxtaner">
-            <div class="aba-conteudo ativa">
+<section class="conxtaner">
+    <div class="aba-conteudo ativa">
 
-                <div class="header-habilidades">
-                    <h2>@ViewData["Title"]</h2>
-                    <button class="btn-adicionar">Adicionar</button>
-                </div>    
+        <div class="header-habilidades">
+            <h2>@ViewData["Title"]</h2>
+            <button class="btn-adicionar">Adicionar</button>
+        </div>
 
-                <div class="Cararcere">
-                    <strong>Todos as Raças 2/200</strong>
+        <div class="Cararcere">
+            <strong>Todos as Raças 2/200</strong>
+        </div>
+
+        <div class="Universe-card">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Humano</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
+                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p><strong>Descrição:</strong> São humanos comuns, assim como qualquer outro, não possuem nada de
+                        especial. Apenas são pessoas que conviveram em sociedade normalmente. Ou nasceram
+                        como feiticeiros.</p>
                 </div>
+            </details>
+        </div>
 
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Humano</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
+        <div class="Universe-card">
+            <details>
+                <summary class="Universe-topo">
+                    <span class="seta">&#9660;</span>
+                    <span><strong>Fetos Amaldiçoados</strong></span>
+                    <div class="button-group">
+                        <button class="btn-acao">Duplicar</button>
+                        <button class="btn-acao">Deletar</button>
                     </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p><strong>Descrição:</strong>  São humanos comuns, assim como qualquer outro, não possuem nada de
-especial. Apenas são pessoas que conviveram em sociedade normalmente. Ou nasceram
-como feiticeiros.</p>
-                    </div>
+                </summary>
+                <div class="Universe-detalhes">
+                    <p><strong>Descrição:</strong> Fetos amaldiçoados são derivados do experimento de Noritoshi
+                        Kamo, basicamente são humanos, porém com uma disponibilidade física superior à raça
+                        humana.
                 </div>
+            </details>
+        </div>
 
-                <div class="habilidade-card">
-                    <div class="habilidade-topo" onclick="toggleDetalhes(this)">
-                        <span class="seta">&#9660;</span>
-                        <span><strong>Fetos Amaldiçoados</strong></span>
-                        <button class="btn-compartilhar">COMPARTILHAR</button>
-                    </div>
-                    <div class="habilidade-detalhes" style="display: none;">
-                        <p><strong>Descrição:</strong> Fetos amaldiçoados são derivados do experimento de Noritoshi
-Kamo, basicamente são humanos, porém com uma disponibilidade física superior à raça
-humana.
-</p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+    </div>
+</section>

@@ -7,93 +7,330 @@
 }
 
 @section Scripts {
-    <script src="/js/Agentes.js" </script>
+    <script src="/js/Agentes.js" asp-append-version="true"></script>
 }
 
-        <div class="conxtaner">
-            <div class="navHeranc">
-                <ul>
-                    <li><a href="#" id="tab-atributos" class="active">Atributos</a></li>
-                    <li><a href="#" id="tab-origem">Origem</a></li>
-                    <li><a href="#" id="tab-habilidades">Habilidades</a></li>
-                    <li><a href="#" id="tab-classe">Classe</a></li>
-                    <li><a href="#" id="tab-toques-finais">Toques Finais</a></li>
-                </ul>
-            </div>
+<div class="conxtaner">
+    <div class="navHeranc">
+        <ul>
+            <li><a href="#" id="tab-atributos" class="active">Atributos</a></li>
+            <li><a href="#" id="tab-origem">Origem</a></li>
+            <li><a href="#" id="tab-variantes">Variantes</a></li>
+            <li><a href="#" id="tab-modificadores">Modificadores</a></li>
+            <li><a href="#" id="tab-toques-finais">Toques Finais</a></li>
+        </ul>
+    </div>
 
-            <div id="main-content" class="main-content">
-                <div id="atributos-section" class="content-section active">
-                    <p class="attribute-intro">
-                        Quando você cria um personagem, todos os seus atributos começam em 1 e você recebe 4 pontos para distribuir entre eles como quiser. Você também pode reduzir um atributo para 0 para receber 1 ponto adicional. O valor máximo inicial que você pode ter em cada atributo é 3.
-                    </p>
+    <div id="main-content" class="main-content">
 
-                    <div class="attribute-distribution">
-                        <div class="attribute-circle">
-                            <div class="attribute-center">
-                                <h2>ATRIBUTOS</h2>
-                                <p>Pontos disponíveis: <span id="available-points"></span></p>
-                            </div>
+        <div id="atributos-section" class="content-section active">
 
-                            <div class="attribute-item agi">
-                                <span class="attribute-value" id="val-agi">1</span>
-                                <span class="attribute-label">AGILIDADE</span>
-                                <span class="attribute-abbr">AGI</span>
-                                <div class="attribute-controls">
-                                    <button class="btn-decrease" data-attr="agi">-</button>
-                                    <button class="btn-increase" data-attr="agi">+</button>
-                                </div>
-                            </div>
-                            <div class="attribute-item int">
-                                <span class="attribute-value" id="val-int">1</span>
-                                <span class="attribute-label">INTELECTO</span>
-                                <span class="attribute-abbr">INT</span>
-                                <div class="attribute-controls">
-                                    <button class="btn-decrease" data-attr="int">-</button>
-                                    <button class="btn-increase" data-attr="int">+</button>
-                                </div>
-                            </div>
-                            <div class="attribute-item vig">
-                                <span class="attribute-value" id="val-vig">1</span>
-                                <span class="attribute-label">VIGOR</span>
-                                <span class="attribute-abbr">VIG</span>
-                                <div class="attribute-controls">
-                                    <button class="btn-decrease" data-attr="vig">-</button>
-                                    <button class="btn-increase" data-attr="vig">+</button>
-                                </div>
-                            </div>
-                            <div class="attribute-item pre">
-                                <span class="attribute-value" id="val-pre">1</span>
-                                <span class="attribute-label">PRESENÇA</span>
-                                <span class="attribute-abbr">PRE</span>
-                                <div class="attribute-controls">
-                                    <button class="btn-decrease" data-attr="pre">-</button>
-                                    <button class="btn-increase" data-attr="pre">+</button>
-                                </div>
-                            </div>
-                            <div class="attribute-item for">
-                                <span class="attribute-value" id="val-for">1</span>
-                                <span class="attribute-label">FORÇA</span>
-                                <span class="attribute-abbr">FOR</span>
-                                <div class="attribute-controls">
-                                    <button class="btn-decrease" data-attr="for">-</button>
-                                    <button class="btn-increase" data-attr="for">+</button>
-                                </div>
-                            </div>
+            <p class="attribute-intro">
+                Quando você cria um personagem, todos os seus atributos começam em 1 e você recebe 4 pontos para
+                distribuir entre eles como quiser. Você também pode reduzir um atributo para 0 para receber 1 ponto
+                adicional. O valor máximo inicial que você pode ter em cada atributo é 3.
+            </p>
+
+            <div class="attribute-distribution">
+                <div class="attribute-circle">
+                    <div class="attribute-center">
+                        <h2>ATRIBUTOS</h2>
+                        <p>Pontos disponíveis: <span id="available-points"></span></p>
+                    </div>
+
+                    <div class="attribute-item agi">
+                        <span class="attribute-value" id="val-agi">1</span>
+                        <span class="attribute-label">AGILIDADE</span>
+                        <span class="attribute-abbr">AGI</span>
+                        <div class="attribute-controls">
+                            <button class="btn-decrease" data-attr="agi">-</button>
+                            <button class="btn-increase" data-attr="agi">+</button>
+                        </div>
+                    </div>
+                    <div class="attribute-item int">
+                        <span class="attribute-value" id="val-int">1</span>
+                        <span class="attribute-label">INTELECTO</span>
+                        <span class="attribute-abbr">INT</span>
+                        <div class="attribute-controls">
+                            <button class="btn-decrease" data-attr="int">-</button>
+                            <button class="btn-increase" data-attr="int">+</button>
+                        </div>
+                    </div>
+                    <div class="attribute-item vig">
+                        <span class="attribute-value" id="val-vig">1</span>
+                        <span class="attribute-label">VIGOR</span>
+                        <span class="attribute-abbr">VIG</span>
+                        <div class="attribute-controls">
+                            <button class="btn-decrease" data-attr="vig">-</button>
+                            <button class="btn-increase" data-attr="vig">+</button>
+                        </div>
+                    </div>
+                    <div class="attribute-item pre">
+                        <span class="attribute-value" id="val-pre">1</span>
+                        <span class="attribute-label">PRESENÇA</span>
+                        <span class="attribute-abbr">PRE</span>
+                        <div class="attribute-controls">
+                            <button class="btn-decrease" data-attr="pre">-</button>
+                            <button class="btn-increase" data-attr="pre">+</button>
+                        </div>
+                    </div>
+                    <div class="attribute-item for">
+                        <span class="attribute-value" id="val-for">1</span>
+                        <span class="attribute-label">FORÇA</span>
+                        <span class="attribute-abbr">FOR</span>
+                        <div class="attribute-controls">
+                            <button class="btn-decrease" data-attr="for">-</button>
+                            <button class="btn-increase" data-attr="for">+</button>
                         </div>
                     </div>
                 </div>
-
-                <div id="origem-section" class="content-section">
-                    <p>Conteúdo da seção Origem.</p>
-                </div>
-                 <div id="habilidades-section" class="content-section">
-                    <p>Conteúdo da seção Habilidades.</p>
-                </div>
-                <div id="classe-section" class="content-section">
-                    <p>Conteúdo da seção Classe.</p>
-                </div>
-                <div id="toques-finais-section" class="content-section">
-                    <p>Conteúdo da seção Toques Finais.</p>
-                </div>
             </div>
         </div>
+
+        <div id="origem-section" class="content-section">
+            <div class="origem-intro">
+                <p>A origem do seu personagem é a sua vida antes de se aventurar na narrativa principal do RPG. Ela
+                    representa seu passado, as experiências que o moldaram e as habilidades que você adquiriu ao longo
+                    dos anos. Essa história pregressa é fundamental para entender quem o seu personagem é hoje e como
+                    ele aborda os desafios que surgirão em sua jornada.</p>
+
+                <p><strong>Ao escolher uma origem, você recebe duas perícias treinadas e um poder da origem.</strong>
+                </p>
+
+                <p>Essas perícias e poder são o ponto de partida para a construção do seu personagem, influenciando suas
+                    escolhas e sua contribuição para o grupo. A origem é uma base sólida para a história que você quer
+                    contar, e você pode adicionar quantos detalhes quiser para personalizar o conceito do seu agente.
+                </p>
+            </div>
+
+            <div class="Universe-card">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Clã Gojo</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p><strong>Descrição:</strong> Descende de Michizane Sugawara , um lendário feiticeiro de
+                            jujutsu da
+                            Era
+                            Heian
+                            que se tornou um dos Três Grandes Espíritos Vingativos do Japão após a morte.
+                            Atualmente está no topo da hierarquia do jujutsu e mantém o equilíbrio de poder.
+                    </div>
+                </details>
+            </div>
+
+            <div class="Universe-card">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Clã Zennin</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p><strong>Descrição:</strong>O Clã Zenin é conhecido por fazer parte dos Três Grandes Clãs, e
+                            por ter
+                            conquistado uma posição sólida na história do jujutsu com suas grandes conquistas. Eles
+                            têm xamãs com excelentes habilidades e técnicas amaldiçoadas incríveis. Possuem o
+                            hábito de valorizar as técnicas amaldiçoadas acima de tudo e rejeitam ou discriminar
+                            qualquer pessoa que não possa controlar a energia amaldiçoada ou que não tenha uma
+                            técnica própria, pois esperam que seus membros sejam "perfeitos", mesmo que sejam
+                            parentes consanguíneos. mas alguns casos raros acabam nascendo com nada de energia
+                            amaldiçoada.
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+
+        <div id="variantes-section" class="content-section">
+            <div class="origem-intro">
+                <p>A variante racial do seu personagem é outro pilar fundamental na sua criação. Ela define a espécie ou
+                    etnia à qual seu personagem pertence, conferindo a ele características herdadas, inclinações
+                    culturais
+                    e, muitas vezes, habilidades únicas que o distinguem de outras raças no seu mundo de jogo.</p>
+
+                <p><strong>Pense na variante racial como a fundação biológica e cultural do seu personagem.</strong>
+
+
+                <p>Cada raça possui um conjunto de traços distintos que podem influenciar desde sua aparência física e
+                    longevidade até suas afinidades com certas habilidades ou magias, e até mesmo sua perspectiva sobre
+                    o mundo.</p>
+            </div>
+
+            <div class="class-selection">
+
+                <div class="card">
+                    <h2>Humano</h2>
+                    <div class="class-card">
+
+                        <p> São humanos comuns, assim como qualquer outro, não possuem nada de
+                            especial. Apenas são pessoas que conviveram em sociedade normalmente. Ou nasceram
+                            como feiticeiros.</p>
+                        <p><strong>Como Qualquer Um: </strong> Recebe duas perícias adicionais ao criar sua ficha.</p>
+
+                        <p><strong>Controle de Energia: </strong> Por conta do seu incrível controle com
+                            energia amaldiçoada
+                            recebe uma redução no seu gasto de energia (porém o mínimo no gasto é Um)</p>
+                    </div>
+                    <button class="escolher-button">Escolha</button>
+                </div>
+
+                <div class="card">
+                    <h2>Fetos Amaldiçoados</h2>
+                    <div class="class-card">
+                        <p>Fetos amaldiçoados são derivados do experimento de Noritoshi
+                            Kamo, basicamente são humanos, porém com uma disponibilidade física superior à raça
+                            humana.</p>
+
+                        <p><strong>Força Espiritual: </strong>Vezes no dia igual sua proficiência pode gastar uma
+                            reação
+                            para
+                            receber um bônus de dano igual ao seu valor de espírito.</p>
+
+                        <p><strong>Corpo Resistente: </strong>Por conta do seu corpo resistente e forte, recebe uma
+                            resistência
+                            há escolha do jogador quando criar a ficha do seu personagem.</p>
+
+                        <p><strong>Metade maldição: </strong>Sua mente é completamente instável pela sua insanidade,
+                            recebendo vulnerabilidade a dano mental. Além disso por ser meio maldição recebe
+                            metade de qualquer fonte de cura que envolva energia reversa.</p>
+                    </div>
+                    <button class="escolher-button">Escolha</button>
+                </div>
+
+                <div class="card">
+                    <h2>Corpos amaldiçoados</h2>
+                    <div class="class-card">
+                        <p>São corpos feitos inteiramente de energia amaldiçoada, porém
+                            trancados dentro de uma espécie de ciborgue. Corpos amaldiçoados não possuem
+                            técnicas
+                            inatas, porém recebem os seguintes benefícios:</p>
+
+                        <p><strong>Arsenal de Armas: </strong> Corpos amaldiçoados podem adicionar equipamentos
+                            em
+                            seu corpo
+                            igual seu valor no atributo Constituição seguindo as do seguinte arquivo</p>
+
+                        <p><strong>Feito de Energia: </strong> Por serem feitos puramente de energia
+                            amaldiçoada,
+                            fetos
+                            amaldiçoados recebem +2 de energia amaldiçoada por nível.</p>
+                    </div>
+                    <button class="escolher-button">Escolha</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="modificadores-section" class="content-section">
+            <div class="origem-intro">
+                <p>Os Modificadores são elementos cruciais que permitem personalizar ainda mais seu personagem,
+                    adicionando profundidade e complexidade à sua história e jogabilidade. Eles funcionam como
+                    Vantagens
+                    e Desvantagens, traços específicos que complementam a origem do seu personagem, oferecendo
+                    bônus ou
+                    penalidades que afetam suas capacidades e interações no mundo do jogo.</p>
+
+                <p><strong>As Vantagens</strong> são características positivas que seu personagem possui,
+                    conferindo-lhe
+                    uma facilidade
+                    ou aptidão em certas áreas. Elas representam talentos inatos, habilidades desenvolvidas com
+                    esforço
+                    ou simplesmente sorte.
+                </p>
+
+                <p><strong>As Desvantagens</strong> são características negativas ou obstáculos que seu
+                    personagem enfrenta. Elas representam fraquezas, limitações ou dificuldades que tornam
+                    certas
+                    situações mais desafiadoras para ele.
+                </p>
+            </div>
+
+            <div class="filter-menu">
+                <div class="filter-option active" data-filter="Todos">Todos</div>
+                <div class="filter-option" data-filter="Vantagens">Vantagens</div>
+                <div class="filter-option" data-filter="Desvantagens">Desvantagens</div>
+            </div>
+
+            <div class="Universe-card" data-type="Vantagens" data-name="Adaptavel">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Adaptável</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p>Por algum motivo seu corpo se adapta mais rápido que o comum a situações extremas.
+                            Caso
+                            receba
+                            dano de um só tipo por no mínimo três turnos, você receberá redução de dano igual ao
+                            seu
+                            valor
+                            de constituição até o fim do combate. (-3)</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="Universe-card" data-type="Desvantagens" data-name="Egoista">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Egoísta</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p>Você é egoísta. Sempre que estiver em situações de risco ou utilizando recursos que
+                            seus
+                            aliados
+                            não
+                            possuam, você nunca irá compartilhar. Além disso, você sempre tentará fugir
+                            independentemente da
+                            situação caso esteja com ferimentos graves. (-2)</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="Universe-card" data-type="Vantagens" data-name="Sorte Inata">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Sorte Inata</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p>A sorte parece estar sempre ao seu lado. Uma vez por sessão, você pode rolar
+                            novamente um
+                            dado
+                            que
+                            falhou. (+1)</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="Universe-card" data-type="Desvantagens" data-name="Alergia a Gatos">
+                <details>
+                    <summary class="Universe-topo">
+                        <span class="seta">&#9660;</span>
+                        <span><strong>Alergia a Gatos</strong></span>
+                        <button class="btn-acao">Escolher</button>
+                    </summary>
+                    <div class="Universe-detalhes">
+                        <p>Você tem uma alergia severa a gatos. A proximidade com gatos pode causar espirros,
+                            coceira e,
+                            em
+                            casos graves, dificuldade para respirar. (-1)</p>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+
+        <div id="toques-finais-section" class="content-section">
+            <p>Conteúdo da seção Toques Finais.</p>
+        </div>
+
+    </div>
+</div>
